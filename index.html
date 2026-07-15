@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script type='text/javascript' src='https://prod-chat-kimi.tos-cn-beijing.volces.com/9MsQxBiDtbHJHraQOZyAb6XT9g8_z-mTHxbXCkAU1tbPqEONJqWqbYMH-qS-AzBVU8Bdd76RinS30GY6VOaLNFsIIEVb1sg-IBkmdFgO5h5A8lHJL9yv7VMQeo0dXlL27vbyl-Uhei6FVq5DkDy4aihwg6NYMe9p1KjSMgHWom4IN637XHUobDRIioxK6E_R47M2gLHJYrl4CJOm6U4hmYQh7wK-4SmOb5CDT6PgfuSU7d54grzs1VoMAoBeEVTdWeO-YgdruunmG3ct7dRBAzjoET_saKOvCcuRwCTv5uLvqT-UUaflYUhsBKUu14G67XOscBXpg13N85c5jfas86oKTs-M-GhWB6OwkJ9WGyesC71zP0L-np-r0l0f8-USYf_5d6H78xlnEjE5wUFsERnpV5eaE7vAOOg1JtwZcZSkFwTJGukD5fpRFmAei6jaHgUiEsXpJPnRHFrXLFNayqI3x2Dx0_SxJswruZdeNMP6FC9GkZ4dXWHNS3XDvKG08R1OeASp6GmJZhes3FQ1OcpgAsRA7kJXcoprG2hdLHTEGvFnz1AcHAiKSbK-lKqXpMSpdF-Bn_Oj8afWAETLK8ypzhzcU4u3okQZTYxVbIA_LtONC7xjnL1uGD3fWQOJkJWBl0P-DFgJicPTWWm8Z_cQYPI9WGGekDYGnGTxlDiot3N3WQU0aeBx0YzvUXBrN-oFC9Uj0ra0p0odCGLEu8MYbLeQz4PNOLqMKk9EcSKpE8cSdyhFOMdi15cp_u8FDfQWdNOBT-QeQxWdej88w2X2tBVzALEMoI8NqUsPiO3kqV2V6lvx5OkkAHgyt5rsWDEND_ZHl_F8wwjhVoDk1DEjwZNYc2mQ2fAubUtZk1Gz08hy42FaBQ52io3ycK-Rk0UpZEeL1Ve86rSlt4bo6subHiNU4ZmZcGKBku2rkM2wPV0D1m-LXhIVDmKUaAO7teiH8i4XcinTPd0vhWn3vMYz_e9iQfzukavlB0I2LE5VyozC0EBxK4xz-77DgTi4c2WPnGybFv0-kkHQuwIodgxz_gVIn8tk0UiCuYQ9m5oKgzx7qO93rJXQ0dZ5Uw-HDQFNzHkibdp9Bw'></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardline Editions — Book Strategist for Experts</title>
+    <title>Hardline Editions: Book Strategist for Experts</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Work+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
     <style>
         :root {
             --black: #111111;
@@ -15,6 +15,11 @@
             --gray: #888888;
             --light-gray: #E5E5E5;
             --accent: #8B1538;
+            --accent-dark: #6B0F2B;
+
+            --font-display: 'Lora', Georgia, serif;
+            --font-body: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'IBM Plex Mono', 'SFMono-Regular', monospace;
         }
 
         * {
@@ -28,12 +33,17 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: var(--font-body);
             font-weight: 400;
             color: var(--black);
             background: var(--white);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
         }
 
         /* Vertical label */
@@ -43,6 +53,7 @@
             top: 50%;
             transform: translateY(-50%) rotate(-90deg);
             transform-origin: center center;
+            font-family: var(--font-mono);
             font-size: 10px;
             font-weight: 500;
             letter-spacing: 3px;
@@ -61,52 +72,47 @@
         }
 
         @media (max-width: 768px) {
-            .container {
-                padding: 0 24px;
-            }
-            .side-label {
-                display: none;
-            }
+            .container { padding: 0 24px; }
+            .side-label { display: none; }
         }
 
         /* Thin rule */
-        .rule {
-            width: 100%;
-            height: 1px;
-            background: var(--light-gray);
-        }
-
-        .rule-dark {
-            width: 60px;
-            height: 2px;
-            background: var(--black);
-        }
-
-        .rule-accent {
-            width: 40px;
-            height: 2px;
-            background: var(--accent);
-        }
+        .rule { width: 100%; height: 1px; background: var(--light-gray); }
+        .rule-dark { width: 60px; height: 2px; background: var(--black); }
+        .rule-accent { width: 40px; height: 2px; background: var(--accent); }
 
         /* Typography */
+        h1, h2, h3 {
+            font-family: var(--font-display);
+        }
+
         h1 {
-            font-size: clamp(42px, 7vw, 72px);
-            font-weight: 300;
-            line-height: 1.05;
-            letter-spacing: -1.5px;
+            font-size: clamp(42px, 7vw, 68px);
+            font-weight: 500;
+            line-height: 1.12;
+            letter-spacing: -0.5px;
         }
 
         h2 {
-            font-size: clamp(32px, 5vw, 56px);
-            font-weight: 300;
-            line-height: 1.1;
-            letter-spacing: -1px;
+            font-size: clamp(30px, 5vw, 50px);
+            font-weight: 500;
+            line-height: 1.18;
+            letter-spacing: -0.3px;
         }
 
         h3 {
-            font-size: clamp(20px, 3vw, 28px);
-            font-weight: 400;
+            font-size: clamp(20px, 3vw, 26px);
+            font-weight: 500;
             line-height: 1.3;
+        }
+
+        /* Italic emphasis inside headlines: same family, descender-safe */
+        em, .emph {
+            font-style: italic;
+            font-weight: 500;
+            line-height: 1.15;
+            display: inline-block;
+            padding-bottom: 4px;
         }
 
         p {
@@ -116,26 +122,23 @@
             max-width: 600px;
         }
 
-        .text-gray {
-            color: var(--gray);
-        }
-
-        .text-small {
-            font-size: 13px;
-            letter-spacing: 0.5px;
-        }
+        .text-gray { color: var(--gray); }
+        .text-small { font-size: 13px; letter-spacing: 0.5px; }
 
         .text-label {
+            font-family: var(--font-mono);
             font-size: 11px;
             font-weight: 500;
-            letter-spacing: 2.5px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
+            color: var(--gray);
         }
 
         /* Buttons */
         .btn {
             display: inline-block;
             padding: 16px 40px;
+            font-family: var(--font-body);
             font-size: 14px;
             font-weight: 500;
             letter-spacing: 1px;
@@ -143,42 +146,26 @@
             text-decoration: none;
             border: none;
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease;
+            white-space: nowrap;
         }
 
-        .btn-primary {
-            background: var(--accent);
-            color: var(--white);
-        }
+        .btn:active { transform: scale(0.98); }
 
-        .btn-primary:hover {
-            background: #6B0F2B;
-        }
+        .btn-primary { background: var(--accent); color: var(--white); }
+        .btn-primary:hover { background: var(--accent-dark); }
 
-        .btn-outline {
-            background: transparent;
-            color: var(--black);
-            border: 1px solid var(--black);
-        }
+        .btn-outline { background: transparent; color: var(--black); border: 1px solid var(--black); }
+        .btn-outline:hover { background: var(--black); color: var(--white); }
 
-        .btn-outline:hover {
-            background: var(--black);
-            color: var(--white);
-        }
-
-        .btn-white {
-            background: var(--white);
-            color: var(--black);
-        }
-
-        .btn-white:hover {
-            background: var(--light-gray);
-        }
+        .btn-white { background: var(--white); color: var(--black); }
+        .btn-white:hover { background: var(--light-gray); }
 
         .btn-text {
             background: none;
             color: var(--accent);
             padding: 0;
+            font-family: var(--font-body);
             font-size: 14px;
             font-weight: 500;
             letter-spacing: 1px;
@@ -190,20 +177,29 @@
             transition: all 0.2s ease;
         }
 
-        .btn-text:hover {
-            color: #6B0F2B;
-            border-color: #6B0F2B;
-        }
+        .btn-text:hover { color: var(--accent-dark); border-color: var(--accent-dark); }
 
         /* Sections */
-        section {
-            padding: 120px 0;
-        }
+        section { padding: 120px 0; }
 
         @media (max-width: 768px) {
-            section {
-                padding: 80px 0;
-            }
+            section { padding: 80px 0; }
+        }
+
+        /* Reveal on scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { opacity: 1; transform: none; transition: none; }
         }
 
         /* IMAGE STYLES */
@@ -212,9 +208,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            font-family: var(--font-mono);
             font-size: 11px;
             color: var(--gray);
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
             text-transform: uppercase;
             text-align: center;
             padding: 20px;
@@ -225,10 +222,7 @@
         .img-placeholder::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            inset: 0;
             border: 1px dashed var(--gray);
             opacity: 0.3;
             pointer-events: none;
@@ -236,11 +230,11 @@
 
         /* HERO */
         .hero {
-            min-height: 100vh;
+            min-height: 100dvh;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 120px 0;
+            padding: 100px 0 60px;
         }
 
         .hero-inner {
@@ -250,10 +244,7 @@
             align-items: center;
         }
 
-        .hero-content h1 {
-            margin-bottom: 32px;
-            max-width: 700px;
-        }
+        .hero-content h1 { margin-bottom: 32px; max-width: 700px; }
 
         .hero-content p {
             font-size: 20px;
@@ -264,34 +255,16 @@
             color: var(--gray);
         }
 
-        .hero-image {
-            aspect-ratio: 3/4;
-            max-height: 520px;
-        }
+        .hero-image { aspect-ratio: 3/4; max-height: 520px; }
+        .hero-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-        .hero-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
+        .hero-cta { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
 
-        .hero-cta {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .hero-meta {
-            margin-top: 80px;
-            display: flex;
-            gap: 48px;
-            flex-wrap: wrap;
-        }
+        .hero-meta { margin-top: 72px; display: flex; gap: 48px; flex-wrap: wrap; }
 
         .hero-meta-item {
-            font-size: 12px;
+            font-family: var(--font-mono);
+            font-size: 11px;
             letter-spacing: 1px;
             text-transform: uppercase;
             color: var(--gray);
@@ -299,29 +272,22 @@
 
         .hero-meta-item strong {
             display: block;
-            font-size: 14px;
+            font-family: var(--font-body);
+            font-size: 15px;
             font-weight: 500;
             color: var(--black);
-            margin-top: 4px;
+            margin-top: 6px;
             text-transform: none;
             letter-spacing: 0;
         }
 
         @media (max-width: 900px) {
-            .hero-inner {
-                grid-template-columns: 1fr;
-                gap: 48px;
-            }
-            .hero-image {
-                max-height: 400px;
-                aspect-ratio: 16/9;
-            }
+            .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+            .hero-image { max-height: 400px; aspect-ratio: 16/9; }
         }
 
         /* TWO WAYS — ENTRY POINTS */
-        .entry-points {
-            background: var(--off-white);
-        }
+        .entry-points { background: var(--off-white); }
 
         .entry-grid {
             display: grid;
@@ -331,61 +297,37 @@
             margin-top: 64px;
         }
 
-        .entry-card {
-            background: var(--white);
-            padding: 64px 48px;
-        }
-
-        .entry-card h3 {
-            font-weight: 500;
-            margin-bottom: 16px;
-            font-size: 24px;
-        }
-
-        .entry-card p {
-            font-size: 15px;
-            color: var(--gray);
-            margin-bottom: 32px;
-            max-width: 400px;
-        }
-
-        .entry-card .btn {
-            margin-bottom: 16px;
-        }
-
-        .entry-note {
-            font-size: 13px;
-            color: var(--gray);
-            margin-top: 16px;
-        }
+        .entry-card { background: var(--white); padding: 64px 48px; display: flex; flex-direction: column; }
+        .entry-card h3 { font-weight: 500; margin-bottom: 16px; }
+        .entry-card p { font-size: 15px; color: var(--gray); margin-bottom: 0; max-width: 400px; }
+        .entry-card > p:first-of-type { margin-bottom: 20px; }
+        .entry-card > .btn { align-self: flex-start; margin-top: auto; }
+        .entry-card .entry-note { font-size: 13px; color: var(--gray); margin-bottom: 24px; }
 
         @media (max-width: 900px) {
-            .entry-grid {
-                grid-template-columns: 1fr;
-            }
+            .entry-grid { grid-template-columns: 1fr; }
         }
 
         /* ASYNC FORM */
-        .async-form {
-            margin-top: 32px;
-        }
+        .async-form { margin-top: 0; }
+        .entry-card > .async-form { margin-top: auto; }
 
         .async-form textarea,
         .async-form input[type="email"] {
             width: 100%;
             padding: 16px;
             border: 1px solid var(--light-gray);
-            font-family: 'Inter', sans-serif;
+            font-family: var(--font-body);
             font-size: 15px;
             line-height: 1.6;
             margin-bottom: 16px;
             resize: vertical;
             min-height: 120px;
+            color: var(--black);
+            background: var(--white);
         }
 
-        .async-form input[type="email"] {
-            min-height: auto;
-        }
+        .async-form input[type="email"] { min-height: auto; }
 
         .async-form textarea:focus,
         .async-form input:focus {
@@ -394,21 +336,9 @@
         }
 
         .async-form textarea::placeholder,
-        .async-form input::placeholder {
-            color: var(--gray);
-        }
+        .async-form input::placeholder { color: var(--gray); }
 
-        .async-form .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-
-        @media (max-width: 500px) {
-            .async-form .form-row {
-                grid-template-columns: 1fr;
-            }
-        }
+        .async-form .form-row { display: grid; grid-template-columns: 1fr; gap: 16px; }
 
         /* PROBLEM */
         .problem .container {
@@ -418,103 +348,49 @@
             align-items: start;
         }
 
-        .problem-left h2 {
-            margin-bottom: 32px;
-        }
-
-        .problem-right p {
-            margin-bottom: 24px;
-            max-width: 480px;
-        }
-
-        .problem-right p:last-child {
-            margin-bottom: 0;
-        }
-
-        .problem-cta {
-            margin-top: 32px;
-        }
+        .problem-left h2 { margin-bottom: 32px; }
+        .problem-right p { margin-bottom: 24px; max-width: 480px; }
+        .problem-right p:last-child { margin-bottom: 0; }
+        .problem-cta { margin-top: 32px; }
 
         @media (max-width: 768px) {
-            .problem .container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
+            .problem .container { grid-template-columns: 1fr; gap: 40px; }
         }
 
         /* WHAT I DO */
-        .what-i-do {
-            background: var(--off-white);
-        }
-
-        .what-i-do-header {
-            margin-bottom: 80px;
-        }
-
-        .what-i-do-header h2 {
-            margin-bottom: 24px;
-        }
+        .what-i-do { background: var(--off-white); }
+        .what-i-do-header { margin-bottom: 72px; }
+        .what-i-do-header h2 { margin-bottom: 24px; }
 
         .tagging-system {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 1px;
             background: var(--light-gray);
-            margin-bottom: 64px;
+            margin-bottom: 56px;
         }
 
-        .tag-item {
-            background: var(--white);
-            padding: 40px 32px;
-        }
+        .tag-item { background: var(--white); padding: 40px 32px; }
 
         .tag-item .tag-number {
+            font-family: var(--font-mono);
             font-size: 11px;
             font-weight: 500;
-            letter-spacing: 2px;
-            color: var(--gray);
-            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent);
             margin-bottom: 16px;
         }
 
-        .tag-item h4 {
-            font-size: 18px;
-            font-weight: 500;
-            margin-bottom: 12px;
-        }
+        .tag-item h4 { font-family: var(--font-display); font-size: 18px; font-weight: 500; margin-bottom: 12px; }
+        .tag-item p { font-size: 14px; color: var(--gray); line-height: 1.6; max-width: none; }
 
-        .tag-item p {
-            font-size: 14px;
-            color: var(--gray);
-            line-height: 1.6;
-            max-width: none;
-        }
-
-        @media (max-width: 900px) {
-            .tagging-system {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 500px) {
-            .tagging-system {
-                grid-template-columns: 1fr;
-            }
-        }
+        @media (max-width: 900px) { .tagging-system { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 500px) { .tagging-system { grid-template-columns: 1fr; } }
 
         /* SERVICES */
-        .service-block {
-            padding: 80px 0;
-            border-bottom: 1px solid var(--light-gray);
-        }
-
-        .service-block:first-of-type {
-            border-top: 1px solid var(--light-gray);
-        }
-
-        .service-block:last-of-type {
-            border-bottom: none;
-        }
+        .service-block { padding: 80px 0; border-bottom: 1px solid var(--light-gray); }
+        .service-block:first-of-type { border-top: 1px solid var(--light-gray); }
+        .service-block:last-of-type { border-bottom: none; }
 
         .service-header {
             display: flex;
@@ -525,31 +401,22 @@
             gap: 16px;
         }
 
-        .service-header h3 {
-            font-weight: 500;
-        }
+        .service-header h3 { font-weight: 500; max-width: 640px; }
 
         .service-tag {
+            font-family: var(--font-mono);
             font-size: 11px;
             font-weight: 500;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
             color: var(--gray);
+            white-space: nowrap;
         }
 
-        .service-block p {
-            margin-bottom: 24px;
-            max-width: 640px;
-        }
+        .service-block p { margin-bottom: 24px; max-width: 640px; }
+        .service-block p:last-of-type { margin-bottom: 0; }
 
-        .service-block p:last-of-type {
-            margin-bottom: 0;
-        }
-
-        .checklist {
-            list-style: none;
-            margin: 32px 0;
-        }
+        .checklist { list-style: none; margin: 32px 0; }
 
         .checklist li {
             padding: 16px 0;
@@ -559,129 +426,73 @@
             max-width: 640px;
         }
 
-        .checklist li:first-child {
-            border-top: 1px solid var(--light-gray);
-        }
+        .checklist li:first-child { border-top: 1px solid var(--light-gray); }
+        .checklist li strong { font-weight: 500; }
 
-        .checklist li strong {
-            font-weight: 500;
-        }
-
-        .service-cta {
-            margin-top: 32px;
-        }
+        .service-cta { margin-top: 32px; }
 
         /* PROCESS */
-        .process {
-            background: var(--off-white);
-        }
-
-        .process-header {
-            margin-bottom: 80px;
-        }
-
-        .process-header h2 {
-            margin-bottom: 16px;
-        }
+        .process { background: var(--off-white); }
+        .process-header { margin-bottom: 72px; }
+        .process-header h2 { margin-bottom: 16px; }
 
         .process-step {
             display: grid;
-            grid-template-columns: 120px 1fr 200px;
+            grid-template-columns: 100px 1fr 200px;
             gap: 40px;
             padding: 40px 0;
             border-bottom: 1px solid var(--light-gray);
             align-items: start;
         }
 
-        .process-step:first-of-type {
-            border-top: 1px solid var(--light-gray);
-        }
+        .process-step:first-of-type { border-top: 1px solid var(--light-gray); }
 
         .step-number {
+            font-family: var(--font-mono);
             font-size: 13px;
             font-weight: 500;
-            letter-spacing: 2px;
-            color: var(--gray);
-            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent);
         }
 
-        .step-content h3 {
-            margin-bottom: 8px;
-            font-weight: 500;
-            font-size: 20px;
-        }
+        .step-content h3 { margin-bottom: 8px; font-weight: 500; font-size: 20px; }
+        .step-content p { font-size: 15px; color: var(--gray); max-width: 480px; }
 
-        .step-content p {
-            font-size: 15px;
-            color: var(--gray);
-            max-width: 480px;
-        }
-
-        .step-meta {
-            text-align: right;
-        }
+        .step-meta { text-align: right; }
 
         .step-price {
+            font-family: var(--font-mono);
             font-size: 13px;
             font-weight: 500;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+            letter-spacing: 0.5px;
             color: var(--black);
         }
 
-        .step-time {
-            font-size: 13px;
-            color: var(--gray);
-            margin-top: 4px;
-        }
+        .step-time { font-size: 13px; color: var(--gray); margin-top: 4px; }
 
         @media (max-width: 900px) {
-            .process-step {
-                grid-template-columns: 1fr;
-                gap: 12px;
-            }
-            .step-meta {
-                text-align: left;
-                display: flex;
-                gap: 16px;
-            }
+            .process-step { grid-template-columns: 1fr; gap: 12px; }
+            .step-meta { text-align: left; display: flex; gap: 16px; }
         }
 
         /* PROCESS IMAGE BAND */
         .process-image-band {
-            margin-top: 80px;
+            margin-top: 72px;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1px;
             background: var(--light-gray);
         }
 
-        .process-image-band .img-placeholder {
-            aspect-ratio: 16/9;
-            background: var(--white);
-        }
+        .process-image-band .img-placeholder { aspect-ratio: 16/9; background: var(--white); }
 
-        @media (max-width: 768px) {
-            .process-image-band {
-                grid-template-columns: 1fr;
-            }
-        }
+        @media (max-width: 768px) { .process-image-band { grid-template-columns: 1fr; } }
 
         /* DIAGNOSTIC PREP */
-        .diagnostic-prep {
-            background: var(--black);
-            color: var(--white);
-        }
+        .diagnostic-prep { background: var(--black); color: var(--white); }
+        .diagnostic-prep h2 { color: var(--white); margin-bottom: 48px; max-width: 640px; }
 
-        .diagnostic-prep h2 {
-            color: var(--white);
-            margin-bottom: 48px;
-        }
-
-        .diagnostic-prep .prep-list {
-            list-style: none;
-            max-width: 640px;
-        }
+        .diagnostic-prep .prep-list { list-style: none; max-width: 640px; }
 
         .diagnostic-prep .prep-list li {
             padding: 24px 0;
@@ -690,18 +501,9 @@
             line-height: 1.7;
         }
 
-        .diagnostic-prep .prep-list li:first-child {
-            border-top: 1px solid rgba(255,255,255,0.15);
-        }
-
-        .diagnostic-prep .prep-list li strong {
-            font-weight: 500;
-            color: var(--white);
-        }
-
-        .diagnostic-prep .prep-list li span {
-            color: rgba(255,255,255,0.6);
-        }
+        .diagnostic-prep .prep-list li:first-child { border-top: 1px solid rgba(255,255,255,0.15); }
+        .diagnostic-prep .prep-list li strong { font-weight: 500; color: var(--white); }
+        .diagnostic-prep .prep-list li span { color: rgba(255,255,255,0.6); }
 
         .diagnostic-prep .prep-note {
             margin-top: 48px;
@@ -711,101 +513,49 @@
         }
 
         /* PRICING */
-        .pricing-header {
-            margin-bottom: 80px;
-        }
+        .pricing-header { margin-bottom: 72px; }
+        .pricing-header h2 { margin-bottom: 16px; }
 
-        .pricing-header h2 {
-            margin-bottom: 16px;
-        }
+        .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--light-gray); }
 
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1px;
-            background: var(--light-gray);
-        }
-
-        .pricing-card {
-            background: var(--white);
-            padding: 48px 40px;
-        }
-
-        .pricing-card.featured {
-            background: var(--black);
-            color: var(--white);
-        }
-
+        .pricing-card { background: var(--white); padding: 48px 40px; }
+        .pricing-card.featured { background: var(--black); color: var(--white); }
         .pricing-card.featured p,
-        .pricing-card.featured .pricing-price {
-            color: var(--white);
-        }
-
-        .pricing-card.featured .pricing-features li {
-            color: rgba(255,255,255,0.7);
-            border-color: rgba(255,255,255,0.15);
-        }
+        .pricing-card.featured .pricing-price { color: var(--white); }
+        .pricing-card.featured .pricing-features li { color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.15); }
 
         .pricing-name {
+            font-family: var(--font-mono);
             font-size: 11px;
             font-weight: 500;
-            letter-spacing: 2.5px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
             margin-bottom: 16px;
         }
 
         .pricing-price {
-            font-size: 42px;
-            font-weight: 300;
-            letter-spacing: -1px;
+            font-family: var(--font-display);
+            font-size: 40px;
+            font-weight: 500;
+            letter-spacing: -0.5px;
             margin-bottom: 8px;
             color: var(--black);
         }
 
-        .pricing-desc {
-            font-size: 14px;
-            color: var(--gray);
-            margin-bottom: 32px;
-            line-height: 1.5;
-        }
+        .pricing-desc { font-size: 14px; color: var(--gray); margin-bottom: 32px; line-height: 1.5; }
 
-        .pricing-features {
-            list-style: none;
-        }
+        .pricing-features { list-style: none; }
+        .pricing-features li { padding: 12px 0; border-bottom: 1px solid var(--light-gray); font-size: 14px; color: var(--gray); }
+        .pricing-features li:first-child { border-top: 1px solid var(--light-gray); }
 
-        .pricing-features li {
-            padding: 12px 0;
-            border-bottom: 1px solid var(--light-gray);
-            font-size: 14px;
-            color: var(--gray);
-        }
+        .pricing-cta { margin-top: 32px; }
 
-        .pricing-features li:first-child {
-            border-top: 1px solid var(--light-gray);
-        }
-
-        .pricing-cta {
-            margin-top: 32px;
-        }
-
-        @media (max-width: 900px) {
-            .pricing-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        @media (max-width: 900px) { .pricing-grid { grid-template-columns: 1fr; } }
 
         /* PROOF */
-        .proof {
-            background: var(--off-white);
-        }
-
-        .proof-header {
-            margin-bottom: 80px;
-        }
-
-        .proof-header h2 {
-            margin-bottom: 16px;
-        }
+        .proof { background: var(--off-white); }
+        .proof-header { margin-bottom: 72px; }
+        .proof-header h2 { margin-bottom: 16px; }
 
         .proof-item {
             display: grid;
@@ -816,74 +566,53 @@
             align-items: start;
         }
 
-        .proof-item:first-of-type {
-            border-top: 1px solid var(--light-gray);
-        }
-
-        .proof-item:last-of-type {
-            border-bottom: none;
-        }
-
-        .proof-item:nth-child(even) .proof-text {
-            order: 2;
-        }
-
-        .proof-item:nth-child(even) .proof-visual {
-            order: 1;
-        }
+        .proof-item:first-of-type { border-top: 1px solid var(--light-gray); }
+        .proof-item:last-of-type { border-bottom: none; }
+        .proof-item:nth-child(even) .proof-text { order: 2; }
+        .proof-item:nth-child(even) .proof-visual { order: 1; }
 
         .proof-text blockquote {
+            font-family: var(--font-display);
+            font-style: italic;
             font-size: 20px;
-            font-weight: 300;
+            font-weight: 400;
             line-height: 1.6;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             max-width: 480px;
         }
 
         .proof-text cite {
-            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-mono);
+            font-size: 12px;
             font-style: normal;
+            letter-spacing: 0.3px;
             color: var(--gray);
-            letter-spacing: 0.5px;
         }
 
-        .proof-visual {
-            aspect-ratio: 4/3;
+        .proof-text cite::before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 1px;
+            background: var(--accent);
         }
 
-        .proof-visual img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
+        .proof-visual { aspect-ratio: 4/3; }
+        .proof-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
         @media (max-width: 768px) {
-            .proof-item {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
+            .proof-item { grid-template-columns: 1fr; gap: 32px; }
             .proof-item:nth-child(even) .proof-text,
-            .proof-item:nth-child(even) .proof-visual {
-                order: unset;
-            }
+            .proof-item:nth-child(even) .proof-visual { order: unset; }
         }
 
         /* FOR / NOT FOR */
-        .for-notfor .container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-        }
-
-        .for-section h3 {
-            margin-bottom: 24px;
-            font-weight: 500;
-        }
-
-        .for-section ul {
-            list-style: none;
-        }
+        .for-notfor .container { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+        .for-section h3 { margin-bottom: 24px; font-weight: 500; }
+        .for-section ul { list-style: none; }
 
         .for-section li {
             padding: 16px 0;
@@ -892,91 +621,44 @@
             line-height: 1.6;
         }
 
-        .for-section li:first-child {
-            border-top: 1px solid var(--light-gray);
-        }
-
-        .not-for .for-section h3 {
-            color: var(--gray);
-        }
-
-        .not-for .for-section li {
-            color: var(--gray);
-        }
+        .for-section li:first-child { border-top: 1px solid var(--light-gray); }
+        .not-for .for-section h3 { color: var(--gray); }
+        .not-for .for-section li { color: var(--gray); }
 
         @media (max-width: 768px) {
-            .for-notfor .container {
-                grid-template-columns: 1fr;
-                gap: 60px;
-            }
+            .for-notfor .container { grid-template-columns: 1fr; gap: 60px; }
         }
 
         /* FAQ */
-        .faq-header {
-            margin-bottom: 80px;
-        }
+        .faq-header { margin-bottom: 64px; }
 
-        .faq-header h2 {
-            margin-bottom: 16px;
-        }
-
-        .faq-item {
-            border-bottom: 1px solid var(--light-gray);
-        }
-
-        .faq-item:first-child {
-            border-top: 1px solid var(--light-gray);
-        }
+        .faq-item { border-bottom: 1px solid var(--light-gray); }
+        .faq-item:first-child { border-top: 1px solid var(--light-gray); }
 
         .faq-question {
             padding: 28px 0;
-            font-size: 17px;
+            font-family: var(--font-display);
+            font-size: 18px;
             font-weight: 500;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 24px;
             transition: color 0.2s;
         }
 
-        .faq-question:hover {
-            color: var(--accent);
-        }
+        .faq-question:hover { color: var(--accent); }
 
-        .faq-toggle {
-            font-size: 24px;
-            font-weight: 300;
-            color: var(--gray);
-            transition: transform 0.3s;
-        }
+        .faq-toggle { font-size: 24px; font-weight: 300; color: var(--gray); transition: transform 0.3s; flex-shrink: 0; }
+        .faq-item.active .faq-toggle { transform: rotate(45deg); }
 
-        .faq-item.active .faq-toggle {
-            transform: rotate(45deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.4s ease;
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 400px;
-            padding-bottom: 28px;
-        }
-
-        .faq-answer p {
-            font-size: 15px;
-            color: var(--gray);
-            line-height: 1.7;
-            max-width: 700px;
-        }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; }
+        .faq-item.active .faq-answer { max-height: 400px; padding-bottom: 28px; }
+        .faq-answer p { font-size: 15px; color: var(--gray); line-height: 1.7; max-width: 700px; }
 
         /* CTA SECTION */
-        .cta-section {
-            position: relative;
-            padding: 0;
-        }
+        .cta-section { position: relative; padding: 0; }
 
         .cta-image-wrap {
             position: relative;
@@ -986,12 +668,7 @@
             max-height: 600px;
         }
 
-        .cta-image-wrap img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
+        .cta-image-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
         .cta-overlay {
             position: absolute;
@@ -1003,32 +680,12 @@
             text-align: center;
         }
 
-        .cta-overlay h2 {
-            color: var(--white);
-            margin-bottom: 24px;
-        }
+        .cta-overlay h2 { color: var(--white); margin-bottom: 24px; }
+        .cta-overlay p { color: rgba(255,255,255,0.8); margin: 0 auto 48px; font-size: 18px; max-width: 500px; }
+        .cta-overlay .btn-primary { background: var(--white); color: var(--black); }
+        .cta-overlay .btn-primary:hover { background: var(--light-gray); }
 
-        .cta-overlay p {
-            color: rgba(255,255,255,0.8);
-            margin: 0 auto 48px;
-            font-size: 18px;
-            max-width: 500px;
-        }
-
-        .cta-overlay .btn-primary {
-            background: var(--white);
-            color: var(--black);
-        }
-
-        .cta-overlay .btn-primary:hover {
-            background: var(--light-gray);
-        }
-
-        @media (max-width: 768px) {
-            .cta-image-wrap {
-                height: 70vh;
-            }
-        }
+        @media (max-width: 768px) { .cta-image-wrap { height: 70vh; } }
 
         /* EMAIL CAPTURE — STICKY BAR */
         .sticky-capture {
@@ -1044,9 +701,7 @@
             transition: transform 0.4s ease;
         }
 
-        .sticky-capture.visible {
-            transform: translateY(0);
-        }
+        .sticky-capture.visible { transform: translateY(0); }
 
         .sticky-capture .container {
             display: flex;
@@ -1056,35 +711,19 @@
             flex-wrap: wrap;
         }
 
-        .sticky-capture p {
-            font-size: 14px;
-            margin: 0;
-            max-width: none;
-        }
-
-        .sticky-capture form {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-        }
+        .sticky-capture p { font-size: 14px; margin: 0; max-width: none; }
+        .sticky-capture form { display: flex; gap: 12px; align-items: center; }
 
         .sticky-capture input[type="email"] {
             padding: 12px 16px;
             border: 1px solid var(--light-gray);
-            font-family: 'Inter', sans-serif;
+            font-family: var(--font-body);
             font-size: 14px;
             width: 240px;
         }
 
-        .sticky-capture input:focus {
-            outline: none;
-            border-color: var(--black);
-        }
-
-        .sticky-capture .btn {
-            padding: 12px 24px;
-            font-size: 12px;
-        }
+        .sticky-capture input:focus { outline: none; border-color: var(--black); }
+        .sticky-capture .btn { padding: 12px 24px; font-size: 12px; }
 
         .sticky-close {
             background: none;
@@ -1096,47 +735,17 @@
         }
 
         @media (max-width: 768px) {
-            .sticky-capture .container {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .sticky-capture form {
-                width: 100%;
-            }
-            .sticky-capture input[type="email"] {
-                flex: 1;
-                width: auto;
-            }
+            .sticky-capture .container { flex-direction: column; align-items: stretch; }
+            .sticky-capture form { width: 100%; }
+            .sticky-capture input[type="email"] { flex: 1; width: auto; }
         }
 
         /* FOOTER */
-        footer {
-            padding: 48px 0;
-            border-top: 1px solid var(--light-gray);
-        }
-
-        footer .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-
-        footer p {
-            font-size: 13px;
-            color: var(--gray);
-        }
-
-        footer a {
-            color: var(--black);
-            text-decoration: none;
-            font-size: 13px;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
+        footer { padding: 48px 0; border-top: 1px solid var(--light-gray); }
+        footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+        footer p { font-size: 13px; color: var(--gray); }
+        footer a { color: var(--black); text-decoration: none; font-size: 13px; }
+        footer a:hover { text-decoration: underline; }
 
         /* Utility */
         .mb-16 { margin-bottom: 16px; }
@@ -1145,12 +754,10 @@
         .mb-48 { margin-bottom: 48px; }
         .mb-64 { margin-bottom: 64px; }
         .mb-80 { margin-bottom: 80px; }
-
     </style>
 </head>
 <body>
 
-    <!-- Side label -->
     <div class="side-label">Hardline Editions</div>
 
     <!-- HERO -->
@@ -1158,21 +765,15 @@
         <div class="container">
             <div class="hero-inner">
                 <div class="hero-content">
-                    <h1>Your best idea is already in there.</h1>
-                    <p>Somewhere in your manuscript, your podcast feed, your years of talking — it's already been said. Just not in the one place that gets you on stages, into podcast feeds as the guest, and paid for what you've been giving away for free.</p>
+                    <h1>Your best idea is <em>already</em> in there.</h1>
+                    <p>Somewhere in your manuscript, your podcast feed, your years of talking, it's already been said. Just not in the one place that gets you on stages, into podcast feeds as the guest, and paid for what you've been giving away for free.</p>
                     <div class="hero-cta">
-                        <a href="#diagnostic" class="btn btn-primary">Book a Free Diagnostic</a>
+                        <a href="#diagnostic" class="btn btn-primary">Book a Diagnostic Call</a>
                         <a href="#services" class="btn btn-outline">See How It Works</a>
                     </div>
                     <div class="hero-meta">
-                        <div class="hero-meta-item">
-                            Current availability
-                            <strong>2 projects per month</strong>
-                        </div>
-                        <div class="hero-meta-item">
-                            Next opening
-                            <strong>August 2026</strong>
-                        </div>
+                        <div class="hero-meta-item">Current availability<strong>2 projects per month</strong></div>
+                        <div class="hero-meta-item">Next opening<strong>August 2026</strong></div>
                     </div>
                 </div>
                 <div class="hero-image img-placeholder">
@@ -1183,23 +784,26 @@
         </div>
     </section>
 
+    <div id="hero-sentinel"></div>
+
     <!-- TWO WAYS TO START — ENTRY POINTS -->
     <section class="entry-points" id="entry">
         <div class="container">
-            <div class="text-label mb-24">Two Ways to Start</div>
-            <h2>Not ready for a call? Send me your work instead.</h2>
+            <div class="text-label mb-24 reveal">Two Ways to Start</div>
+            <h2 class="reveal">Not ready for a call? Send me your work instead.</h2>
 
             <div class="entry-grid">
                 <div class="entry-card">
                     <h3>Book the diagnostic</h3>
                     <p>15 minutes. I'll tell you one thing your material does well, one thing working against you, and whether a book is the right move. If it's not, I'll say so.</p>
-                    <a href="#diagnostic" class="btn btn-primary">Schedule Your Call</a>
                     <p class="entry-note">Before the call, you'll send me your manuscript, outline, or links to 3 episodes.</p>
+                    <a href="#diagnostic" class="btn btn-primary">Book a Diagnostic Call</a>
                 </div>
 
                 <div class="entry-card">
                     <h3>Get a 2-paragraph assessment</h3>
-                    <p>Paste your subtitle or a paragraph from your manuscript. I'll send you a 2-paragraph assessment within 24 hours — what's working, what's working against you, and whether a book is the right move.</p>
+                    <p>Paste your subtitle or a paragraph from your manuscript. I'll send you a 2-paragraph assessment within 24 hours: what's working, what's working against you, and whether a book is the right move.</p>
+                    <p class="entry-note">No call required. I'll reply within 24 hours.</p>
                     <form class="async-form" onsubmit="event.preventDefault(); alert('Form submitted — this is a demo. Wire this to your email backend.');">
                         <textarea placeholder="Paste your subtitle or a paragraph from your manuscript here..." required></textarea>
                         <div class="form-row">
@@ -1207,7 +811,6 @@
                             <button type="submit" class="btn btn-primary" style="width:100%;">Get My Assessment</button>
                         </div>
                     </form>
-                    <p class="entry-note">No call required. I'll reply within 24 hours.</p>
                 </div>
             </div>
         </div>
@@ -1218,14 +821,14 @@
         <div class="container">
             <div class="problem-left">
                 <div class="rule-dark mb-32"></div>
-                <h2>Most business books fail before Chapter 1.</h2>
+                <h2 class="reveal">Most business books fail before Chapter 1.</h2>
             </div>
             <div class="problem-right">
                 <p>Not because the expertise is bad. Because the book was built like a textbook, not an asset.</p>
                 <p>A book that doesn't generate leads, justify your fees, or open doors to speaking is just paper with your name on it.</p>
                 <p><strong>If you've been rewriting sentences when the real fix is somewhere else in the book, you're not alone.</strong> Most authors assume a book that isn't converting readers into clients needs better writing. Almost every time I open a manuscript, the sentences are fine. The sequence is what's working against the author.</p>
                 <div class="problem-cta">
-                    <a href="#entry" class="btn btn-outline">If your book has thirteen good ideas and no clear order, let's talk</a>
+                    <a href="#entry" class="btn btn-outline">Send me your manuscript</a>
                 </div>
             </div>
         </div>
@@ -1235,8 +838,7 @@
     <section class="what-i-do" id="what-i-do">
         <div class="container">
             <div class="what-i-do-header">
-                <div class="text-label mb-24">What I Do</div>
-                <h2>Every story and insight gets sorted by the job it does.</h2>
+                <h2 class="reveal">Every story and insight gets sorted by the job it does.</h2>
             </div>
 
             <div class="tagging-system">
@@ -1262,15 +864,15 @@
                 </div>
             </div>
 
-            <p style="max-width: 640px; font-size: 17px; line-height: 1.7;">That fourth category is the one authors underrate. Feels too much like selling. It's usually the opposite: the insight that reframes how someone sees their own life does more for a reader than any technique in the book, and it's often sitting quietly on page 140, doing all the work with none of the credit.</p>
+            <p style="max-width: 640px; font-size: 17px; line-height: 1.7;">That fourth category is the one authors underrate. It feels too much like selling. It's usually the opposite: the insight that reframes how someone sees their own life does more for a reader than any technique in the book, and it's often sitting quietly on page 140, doing all the work with none of the credit.</p>
         </div>
     </section>
 
     <!-- SERVICES -->
     <section class="services" id="services">
         <div class="container">
-            <div class="text-label mb-24">Two Ways In</div>
-            <h2 class="mb-80">Same philosophy. Different starting points.</h2>
+            <div class="text-label mb-24 reveal">Two Ways In</div>
+            <h2 class="mb-80 reveal">Same philosophy. Different starting points.</h2>
 
             <!-- Service 1: Compression -->
             <div class="service-block">
@@ -1279,18 +881,18 @@
                     <span class="service-tag">The Compression</span>
                 </div>
                 <p>A year of your life went into a manuscript. Before anyone touches it with a red pen, you need to hear that.</p>
-                <p>Thirteen chapters went in. Five came out. Not because eight were bad. Because most readers never made it far enough to find out.</p>
+                <p>Thirteen chapters went in. Five came out. Not because eight were bad, but because most readers never made it far enough to find out.</p>
 
                 <ul class="checklist">
                     <li><strong>Where's the best story sitting?</strong> Almost every manuscript has its strongest proof buried in the middle, right where it does the least good.</li>
-                    <li><strong>Is there a duplicate hiding in plain sight?</strong> That line you love — you've already said it, almost word for word, two chapters back.</li>
+                    <li><strong>Is there a duplicate hiding in plain sight?</strong> That line you love, you've already said it, almost word for word, two chapters back.</li>
                     <li><strong>Does the ending close the loop or leave it open?</strong> A tidy, resolved ending feels satisfying to write. It works against a book whose whole job is making the reader want more of you.</li>
                 </ul>
 
                 <p>Get those three right and most of the rest follows on its own.</p>
 
                 <div class="service-cta">
-                    <a href="#entry" class="btn btn-outline">If you've been rewriting sentences when the real fix is somewhere else, book a diagnostic</a>
+                    <a href="#entry" class="btn btn-outline">Book a diagnostic for your manuscript</a>
                 </div>
             </div>
 
@@ -1302,10 +904,10 @@
                 </div>
                 <p>Ten hours of talking is not a manuscript. It's ten hours of you thinking out loud, saying the same idea four different ways because you didn't know which version would land. All of that is gold. None of it is finished, and none of it is doing the one job that actually matters.</p>
                 <p>Most podcast-to-book services just clean up your transcript. Chapter one is episode one, chapter two is episode two, tidied up, some paragraph breaks added, done. Technically a book. Functionally a very expensive PDF nobody's going to finish.</p>
-                <p><strong>We don't start with your episodes in order.</strong> We start by finding the one idea you keep circling back to across all ten hours — the belief you'd defend even if every guest disagreed with you — and build the book's spine around that first. Because that spine is what eventually gets quoted in an introduction before you walk on stage.</p>
+                <p><strong>We don't start with your episodes in order.</strong> We start by finding the one idea you keep circling back to across all ten hours, the belief you'd defend even if every guest disagreed with you, and build the book's spine around that first. Because that spine is what eventually gets quoted in an introduction before you walk on stage.</p>
 
                 <div class="service-cta">
-                    <a href="#entry" class="btn btn-outline">If what you've got is closer to a transcript than a thesis, let's find your idea</a>
+                    <a href="#entry" class="btn btn-outline">Find the spine in your episodes</a>
                 </div>
             </div>
         </div>
@@ -1315,8 +917,8 @@
     <section class="process" id="process">
         <div class="container">
             <div class="process-header">
-                <div class="text-label mb-24">The Process</div>
-                <h2>Four stages. One outcome.</h2>
+                <div class="text-label mb-24 reveal">The Process</div>
+                <h2 class="reveal">Four stages. One outcome.</h2>
             </div>
 
             <div class="process-step">
@@ -1335,7 +937,7 @@
                 <div class="step-number">02</div>
                 <div class="step-content">
                     <h3>Assessment</h3>
-                    <p>5-page strategic review of your material — manuscript, transcripts, outline, whatever you have. What works, what doesn't, what comes next.</p>
+                    <p>5-page strategic review of your material: manuscript, transcripts, outline, whatever you have. What works, what doesn't, what comes next.</p>
                 </div>
                 <div class="step-meta">
                     <div class="step-price">$200</div>
@@ -1359,7 +961,7 @@
                 <div class="step-number">04</div>
                 <div class="step-content">
                     <h3>Authority Engine</h3>
-                    <p>The book plus the full platform: funnel, landing page, email sequence, launch strategy. The book becomes your business engine. Built to convert readers into clients, not fans.</p>
+                    <p>The book plus the full platform: funnel, landing page, email sequence, launch strategy. The book becomes your business engine, built to convert readers into clients, not fans.</p>
                 </div>
                 <div class="step-meta">
                     <div class="step-price">From $2,200</div>
@@ -1367,14 +969,13 @@
                 </div>
             </div>
 
-            <!-- Process image band -->
             <div class="process-image-band">
                 <div class="img-placeholder">
                     <img src="" alt="[PROCESS IMAGE 1: Overhead shot of a messy desk with scattered manuscript pages, a red pen, a coffee cup, and a laptop showing a document. Warm natural light. Shows the work in progress.]" style="display:none;">
                     <span>Process Image 1</span>
                 </div>
                 <div class="img-placeholder">
-                    <img src="" alt="[PROCESS IMAGE 2: Detail macro shot of printed text with red editorial marks — strikethroughs, arrows, margin notes. Sharp focus on the ink. Shows the precision of the editing craft.]" style="display:none;">
+                    <img src="" alt="[PROCESS IMAGE 2: Detail macro shot of printed text with red editorial marks, strikethroughs, arrows, margin notes. Sharp focus on the ink. Shows the precision of the editing craft.]" style="display:none;">
                     <span>Process Image 2</span>
                 </div>
             </div>
@@ -1384,8 +985,7 @@
     <!-- DIAGNOSTIC PREP — WHAT HAPPENS ON THE CALL -->
     <section class="diagnostic-prep" id="diagnostic-prep">
         <div class="container">
-            <div class="text-label mb-24" style="color: rgba(255,255,255,0.5);">What Happens on the Call</div>
-            <h2>No pitch. If we're not a fit, I'll say so.</h2>
+            <h2 class="reveal">No pitch. If we're not a fit, I'll say so.</h2>
 
             <ul class="prep-list">
                 <li><strong>Before the call,</strong> <span>you'll send me your manuscript, outline, or links to 3 episodes. I review it beforehand so our time is spent on strategy, not catching up.</span></li>
@@ -1402,8 +1002,8 @@
     <section class="pricing" id="pricing">
         <div class="container">
             <div class="pricing-header">
-                <div class="text-label mb-24">Investment</div>
-                <h2>Pilot pricing. First 5 clients only.</h2>
+                <div class="text-label mb-24 reveal">Investment</div>
+                <h2 class="reveal">Pilot pricing. First 5 clients only.</h2>
             </div>
             <div class="pricing-grid">
                 <div class="pricing-card">
@@ -1416,7 +1016,7 @@
                         <li>No pitch, no pressure</li>
                     </ul>
                     <div class="pricing-cta">
-                        <a href="#diagnostic" class="btn btn-outline">Book Now</a>
+                        <a href="#diagnostic" class="btn btn-outline">Book a Diagnostic Call</a>
                     </div>
                 </div>
                 <div class="pricing-card featured">
@@ -1444,7 +1044,7 @@
                         <li>Launch strategy & support</li>
                     </ul>
                     <div class="pricing-cta">
-                        <a href="#diagnostic" class="btn btn-outline">Book a Call</a>
+                        <a href="#diagnostic" class="btn btn-outline">Book a Diagnostic Call</a>
                     </div>
                 </div>
             </div>
@@ -1455,18 +1055,18 @@
     <section class="proof" id="proof">
         <div class="container">
             <div class="proof-header">
-                <div class="text-label mb-24">From the Work</div>
-                <h2>Same words. Different placement. Different outcome.</h2>
+                <div class="text-label mb-24 reveal">From the Work</div>
+                <h2 class="reveal">Same words. Different placement. Different outcome.</h2>
             </div>
 
             <div class="proof-item">
                 <div class="proof-text">
                     <blockquote>"He's facing a teenager holding two knives, choosing to stay instead of run. For eleven chapters that moment was sitting halfway through a chapter on emotions, treated like a footnote instead of the strongest proof in the book."</blockquote>
                     <blockquote>"We moved it. Same words, same sentence, just repositioned to open the section on stress and the body. Nothing about the story changed. Only where a reader meets it did."</blockquote>
-                    <cite>— Manuscript compression, 13 chapters to 5 sections</cite>
+                    <cite>Manuscript compression, 13 chapters to 5 sections</cite>
                 </div>
                 <div class="proof-visual img-placeholder">
-                    <img src="" alt="[PROOF IMAGE 1: A before-and-after spread showing manuscript pages — the left page with a paragraph circled in the middle, the right page with that same paragraph moved to the top of a new section. Red editorial marks visible. Shows the repositioning work.]" style="display:none;">
+                    <img src="" alt="[PROOF IMAGE 1: A before-and-after spread showing manuscript pages, the left page with a paragraph circled in the middle, the right page with that same paragraph moved to the top of a new section. Red editorial marks visible. Shows the repositioning work.]" style="display:none;">
                     <span>Proof Image 1</span>
                 </div>
             </div>
@@ -1476,7 +1076,7 @@
                     <blockquote>"The best chapter in a client's book was one sentence, buried about forty minutes into episode sixty. He'd completely forgotten he ever said it."</blockquote>
                     <blockquote>"He's twenty minutes into that episode, mid-thought, heading somewhere else, and he says the actual thesis of his whole philosophy without meaning to. Then keeps talking. Moves past it like it was nothing."</blockquote>
                     <blockquote>"Once it's on page one instead of buried in episode sixty, it's the line that gets forwarded, quoted in an intro, and eventually turns into the invitation that pays."</blockquote>
-                    <cite>— Content-to-book, 300+ podcast episodes to 1 manuscript</cite>
+                    <cite>Content-to-book, 300+ podcast episodes to 1 manuscript</cite>
                 </div>
                 <div class="proof-visual img-placeholder">
                     <img src="" alt="[PROOF IMAGE 2: A podcast waveform visualization next to a clean manuscript page. The waveform has a small section highlighted, and an arrow points to the top of the manuscript page. Shows the extraction from audio to text.]" style="display:none;">
@@ -1487,7 +1087,7 @@
             <div class="proof-item">
                 <div class="proof-text">
                     <blockquote>"I had 50 hours of content and no idea how to turn it into something that felt like a real book. In 10 days, I had a manuscript I was proud to put my name on."</blockquote>
-                    <cite>— Client Name, Position/Company</cite>
+                    <cite>Client Name, Position/Company</cite>
                 </div>
                 <div class="proof-visual img-placeholder">
                     <img src="" alt="[PROOF IMAGE 3: A professional book cover mockup standing upright on a shelf or desk, spine visible with Hardline Editions at the bottom. Clean, editorial design. Warm side lighting. Shows the finished product.]" style="display:none;">
@@ -1501,18 +1101,16 @@
     <section class="for-notfor" id="for-notfor">
         <div class="container">
             <div class="for-section">
-                <div class="text-label mb-24">For</div>
-                <h3>Coaches, consultants, and therapists</h3>
+                <h3>For coaches, consultants, and therapists</h3>
                 <ul>
-                    <li>Your expertise clearly works — you have results to prove it</li>
+                    <li>Your expertise clearly works, you have results to prove it</li>
                     <li>You need authority that justifies premium pricing</li>
                     <li>You want a book that opens doors, not collects dust</li>
                     <li>You have (or are building) a paid offer behind the book</li>
                 </ul>
             </div>
             <div class="for-section not-for">
-                <div class="text-label mb-24">Not For</div>
-                <h3>People who want to "be an author"</h3>
+                <h3>Not for people who want to "be an author"</h3>
                 <ul>
                     <li>No business backend behind the book</li>
                     <li>Looking for a creative writing coach or memoir project</li>
@@ -1527,78 +1125,42 @@
     <section class="faq" id="faq">
         <div class="container">
             <div class="faq-header">
-                <div class="text-label mb-24">FAQ</div>
-                <h2>Questions worth answering.</h2>
+                <h2 class="reveal">Questions worth answering.</h2>
             </div>
 
             <div class="faq-item active">
-                <div class="faq-question">
-                    What if the writing was never the problem?
-                    <span class="faq-toggle">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Most authors assume a book that isn't converting readers into clients needs better sentences. Almost every time I open a manuscript, the sentences are fine. The sequence is what's working against the author.</p>
-                </div>
+                <div class="faq-question">What if the writing was never the problem?<span class="faq-toggle">+</span></div>
+                <div class="faq-answer"><p>Most authors assume a book that isn't converting readers into clients needs better sentences. Almost every time I open a manuscript, the sentences are fine. The sequence is what's working against the author.</p></div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
-                    Do I need a finished manuscript?
-                    <span class="faq-toggle">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>No. An outline, rough draft, 50 hours of podcast content, or 300 episodes works. We assess what's there and build from it. The diagnostic tells us if you have enough raw material — or if you need to create more before we start.</p>
-                </div>
+                <div class="faq-question">Do I need a finished manuscript?<span class="faq-toggle">+</span></div>
+                <div class="faq-answer"><p>No. An outline, rough draft, 50 hours of podcast content, or 300 episodes works. We assess what's there and build from it. The diagnostic tells us if you have enough raw material, or if you need to create more before we start.</p></div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
-                    Do you take royalties?
-                    <span class="faq-toggle">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>No. The book is 100% yours. Hardline Editions appears on the copyright page as the imprint, but you keep all rights and all revenue. I charge a flat fee for the work. What the book earns for your business — speaking fees, coaching clients, consulting engagements — is yours alone.</p>
-                </div>
+                <div class="faq-question">Do you take royalties?<span class="faq-toggle">+</span></div>
+                <div class="faq-answer"><p>No. The book is 100% yours. Hardline Editions appears on the copyright page as the imprint, but you keep all rights and all revenue. I charge a flat fee for the work. What the book earns for your business, speaking fees, coaching clients, consulting engagements, is yours alone.</p></div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
-                    How long does it take?
-                    <span class="faq-toggle">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Diagnostic: 15 minutes. Assessment: 48 hours. The Finish Line: 10 days from kickoff to print-ready files. Authority Engine: 4 weeks including the full platform build. Timelines assume you can turn around feedback within 24 hours.</p>
-                </div>
+                <div class="faq-question">How long does it take?<span class="faq-toggle">+</span></div>
+                <div class="faq-answer"><p>Diagnostic: 15 minutes. Assessment: 48 hours. The Finish Line: 10 days from kickoff to print-ready files. Authority Engine: 4 weeks including the full platform build. Timelines assume you can turn around feedback within 24 hours.</p></div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
-                    Is this self-publishing?
-                    <span class="faq-toggle">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Technically yes — we use KDP and IngramSpark for printing and distribution. Strategically no. Most self-published books are built as products for sale. Yours is built as a business asset. The printing method is the same. The strategy, structure, and outcome are completely different.</p>
-                </div>
+                <div class="faq-question">Is this self-publishing?<span class="faq-toggle">+</span></div>
+                <div class="faq-answer"><p>Technically yes, we use KDP and IngramSpark for printing and distribution. Strategically no. Most self-published books are built as products for sale. Yours is built as a business asset. The printing method is the same. The strategy, structure, and outcome are completely different.</p></div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
-                    What's the difference between The Finish Line and Authority Engine?
-                    <span class="faq-toggle">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>The Finish Line gets you a professional book. Authority Engine turns that book into a client acquisition system. If you already have a funnel and just need the asset, The Finish Line is enough. If you need the book to actually generate leads and appointments, you need the Engine.</p>
-                </div>
+                <div class="faq-question">What's the difference between The Finish Line and Authority Engine?<span class="faq-toggle">+</span></div>
+                <div class="faq-answer"><p>The Finish Line gets you a professional book. Authority Engine turns that book into a client acquisition system. If you already have a funnel and just need the asset, The Finish Line is enough. If you need the book to actually generate leads and appointments, you need the Engine.</p></div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
-                    What if I'm not ready?
-                    <span class="faq-toggle">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>I'll tell you. The diagnostic is honest. If a book isn't the right move — maybe you need to refine your offer first, or build more case studies — I'll say so and point you toward what is. No charge, no hard sell. I'd rather you come back ready than start prematurely.</p>
-                </div>
+                <div class="faq-question">What if I'm not ready?<span class="faq-toggle">+</span></div>
+                <div class="faq-answer"><p>I'll tell you. The diagnostic is honest. If a book isn't the right move, maybe you need to refine your offer first, or build more case studies, I'll say so and point you toward what is. No charge, no hard sell. I'd rather you come back ready than start prematurely.</p></div>
             </div>
         </div>
     </section>
@@ -1606,13 +1168,13 @@
     <!-- CTA -->
     <section class="cta-section" id="diagnostic">
         <div class="cta-image-wrap img-placeholder">
-            <img src="" alt="[CTA IMAGE: Wide shot of a speaking stage from the audience perspective — a single spotlight, empty podium, darkened room. Or alternatively: a clean desk from above with a closed book, a pen, and a cup of coffee. Warm, inviting, human. Sets the mood for taking action.]" style="display:none;">
+            <img src="" alt="[CTA IMAGE: Wide shot of a speaking stage from the audience perspective, a single spotlight, empty podium, darkened room. Or alternatively: a clean desk from above with a closed book, a pen, and a cup of coffee. Warm, inviting, human. Sets the mood for taking action.]" style="display:none;">
             <span>CTA Background Image</span>
             <div class="cta-overlay">
                 <div>
                     <h2>Book your free diagnostic.</h2>
-                    <p>15 minutes. Honest assessment. If a book isn't your next move, I'll tell you — and point you toward what is.</p>
-                    <a href="#" class="btn btn-primary">Schedule Your Call</a>
+                    <p>15 minutes. Honest assessment. If a book isn't your next move, I'll tell you, and point you toward what is.</p>
+                    <a href="#" class="btn btn-primary">Book a Diagnostic Call</a>
                 </div>
             </div>
         </div>
@@ -1622,16 +1184,14 @@
     <footer>
         <div class="container">
             <p>Hardline Editions</p>
-            <div>
-                <a href="mailto:hello@hardlineeditions.com">hello@hardlineeditions.com</a>
-            </div>
+            <div><a href="mailto:hello@hardlineeditions.com">hello@hardlineeditions.com</a></div>
         </div>
     </footer>
 
     <!-- STICKY EMAIL CAPTURE -->
     <div class="sticky-capture" id="stickyCapture">
         <div class="container">
-            <p><strong>Not ready yet?</strong> Get the 3-Minute Manuscript Audit — 5 questions that tell you if your book idea is ready.</p>
+            <p><strong>Not ready yet?</strong> Get the 3-Minute Manuscript Audit: 5 questions that tell you if your book idea is ready.</p>
             <form onsubmit="event.preventDefault(); document.getElementById('stickyCapture').classList.remove('visible'); alert('Thanks — check your inbox for the audit.');">
                 <input type="email" placeholder="Your email" required>
                 <button type="submit" class="btn btn-primary">Get the Audit</button>
@@ -1641,13 +1201,12 @@
     </div>
 
     <!-- RETARGETING PIXEL PLACEHOLDER -->
-    <!-- 
+    <!--
     ADD YOUR RETARGETING PIXELS HERE:
     - LinkedIn Insight Tag
     - Meta Pixel (Facebook/Instagram)
     - Google Analytics 4
-
-    This fires when someone visits the site, enabling you to retarget 
+    This fires when someone visits the site, enabling you to retarget
     LinkedIn connections who clicked through but didn't book.
     -->
 
@@ -1662,14 +1221,38 @@
             });
         });
 
-        // Show sticky capture after scrolling past hero
+        // Sticky capture: show once the hero has scrolled out of view (IntersectionObserver, no scroll listener)
+        const stickyBar = document.getElementById('stickyCapture');
+        const sentinel = document.getElementById('hero-sentinel');
         let captureShown = false;
-        window.addEventListener('scroll', () => {
-            if (!captureShown && window.scrollY > window.innerHeight * 0.8) {
-                document.getElementById('stickyCapture').classList.add('visible');
-                captureShown = true;
-            }
-        });
+
+        if ('IntersectionObserver' in window && sentinel) {
+            const stickyObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting && !captureShown) {
+                        stickyBar.classList.add('visible');
+                        captureShown = true;
+                    }
+                });
+            }, { threshold: 0 });
+            stickyObserver.observe(sentinel);
+        }
+
+        // Restrained reveal-on-scroll for section headers
+        const revealEls = document.querySelectorAll('.reveal');
+        if ('IntersectionObserver' in window && revealEls.length) {
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+            revealEls.forEach(el => revealObserver.observe(el));
+        } else {
+            revealEls.forEach(el => el.classList.add('is-visible'));
+        }
     </script>
 
 </body>
