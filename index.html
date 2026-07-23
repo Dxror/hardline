@@ -4,9 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hardline Editions: Book Strategist for Experts</title>
+    <meta name="description" content="Book strategist for coaches, consultants, and therapists. Hardline Editions turns your manuscript or podcast catalog into a book built to book clients, not collect dust.">
+    <meta name="theme-color" content="#111111">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hardline Editions: Book Strategist for Experts">
+    <meta property="og:description" content="Book strategist for coaches, consultants, and therapists. Turn your manuscript or podcast catalog into a book built to book clients, not collect dust.">
+    <meta property="og:url" content="https://hardlineeditions.com/">
+    <meta property="og:image" content="https://hardlineeditions.com/og-image.jpg">
+    <meta property="og:site_name" content="Hardline Editions">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hardline Editions: Book Strategist for Experts">
+    <meta name="twitter:description" content="Book strategist for coaches, consultants, and therapists. Turn your manuscript or podcast catalog into a book built to book clients, not collect dust.">
+    <meta name="twitter:image" content="https://hardlineeditions.com/og-image.jpg">
+
+    <!-- Placeholder monogram favicon: swap for a designed icon file when you have one -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23111111'/%3E%3Ctext x='50' y='69' font-family='Georgia, serif' font-size='58' fill='%238B1538' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Work+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+
+    <!-- FAQ structured data for search engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What if the writing was never the problem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most authors assume a book that isn't converting readers into clients needs better sentences. Almost every time I open a manuscript, the sentences are fine. What's actually working against the author is The Shelf, the years a manuscript sits half-finished until the author starts to believe the problem is them instead of the structure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a finished manuscript?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. An outline, rough draft, 50 hours of podcast content, or 300 episodes works. We assess what's there and build from it. The diagnostic tells us if you have enough raw material, or if you need to create more before we start."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you take royalties?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The book is 100% yours. Hardline Editions appears on the copyright page as the imprint, but you keep all rights and all revenue. I charge a flat fee for the work. What the book earns for your business, speaking fees, coaching clients, consulting engagements, is yours alone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Diagnostic: 15 minutes. Assessment: 48 hours. The Finish Line: 10 days from kickoff to print-ready files. Authority Engine: 4 weeks including the full platform build. Timelines assume you can turn around feedback within 24 hours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this self-publishing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Technically yes, we use KDP and IngramSpark for printing and distribution. Strategically no. Most self-published books are built as products for sale. Yours is built as a business asset. The printing method is the same. The strategy, structure, and outcome are completely different."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between The Finish Line and Authority Engine?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Finish Line gets you a professional book. Authority Engine turns that book into a client acquisition system. If you already have a funnel and just need the asset, The Finish Line is enough. If you need the book to actually generate leads and appointments, you need the Engine."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I'm not ready?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "I'll tell you. The diagnostic is honest. If a book isn't the right move, maybe you need to refine your offer first, or build more case studies, I'll say so and point you toward what is. No charge, no hard sell. I'd rather you come back ready than start prematurely."
+          }
+        }
+      ]
+    }
+    </script>
+
     <style>
         :root {
             --black: #111111;
@@ -74,6 +161,70 @@
         @media (max-width: 768px) {
             .container { padding: 0 24px; }
             .side-label { display: none; }
+        }
+
+        /* STICKY NAV */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 200;
+            background: rgba(255, 255, 255, 0.9);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .site-header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            padding-top: 18px;
+            padding-bottom: 18px;
+        }
+
+        .site-logo {
+            font-family: var(--font-display);
+            font-size: 19px;
+            font-weight: 500;
+            letter-spacing: -0.3px;
+            color: var(--black);
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+
+        .site-nav {
+            display: flex;
+            gap: 32px;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .site-nav a {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .site-nav a:hover { color: var(--black); }
+
+        .site-header .btn {
+            padding: 12px 24px;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 900px) {
+            .site-nav { display: none; }
+        }
+
+        @media (max-width: 500px) {
+            .site-logo { font-size: 16px; }
+            .site-header .btn { padding: 10px 16px; font-size: 11px; }
         }
 
         /* Thin rule */
@@ -146,11 +297,12 @@
             text-decoration: none;
             border: none;
             cursor: pointer;
-            transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease;
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease, color 0.2s ease;
             white-space: nowrap;
         }
 
-        .btn:active { transform: scale(0.98); }
+        .btn:hover { transform: translateY(-3px); }
+        .btn:active { transform: scale(0.98) translateY(0); }
 
         .btn-primary { background: var(--accent); color: var(--white); }
         .btn-primary:hover { background: var(--accent-dark); }
@@ -180,7 +332,7 @@
         .btn-text:hover { color: var(--accent-dark); border-color: var(--accent-dark); }
 
         /* Sections */
-        section { padding: 120px 0; }
+        section { padding: 120px 0; scroll-margin-top: 88px; }
 
         @media (max-width: 768px) {
             section { padding: 80px 0; }
@@ -198,8 +350,99 @@
             transform: translateY(0);
         }
 
+        /* Larger headline reveal */
+        .reveal { transform: translateY(28px); transition-duration: 0.8s; }
+
+        /* Tag items: rise + scale with a slight overshoot (springy pop) */
+        .tag-item {
+            opacity: 0;
+            transform: translateY(36px) scale(0.92);
+            transition: opacity 0.7s ease-out, transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .tag-item.is-visible { opacity: 1; transform: translateY(0) scale(1); }
+
+        /* Process steps: slide in from the left, staggered */
+        .process-step {
+            opacity: 0;
+            transform: translateX(-56px);
+            transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .process-step.is-visible { opacity: 1; transform: translateX(0); }
+
+        /* Pricing cards: rise with scale, featured card pops slightly more */
+        .pricing-card {
+            opacity: 0;
+            transform: translateY(50px) scale(0.94);
+            transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .pricing-card.is-visible { opacity: 1; transform: translateY(0) scale(1); }
+
+        /* Proof items: alternate slide direction, echoing their zigzag layout */
+        .proof-item {
+            opacity: 0;
+            transform: translateY(40px) translateX(-50px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .proof-item:nth-child(even) { transform: translateY(40px) translateX(50px); }
+        .proof-item.is-visible { opacity: 1; transform: translateY(0) translateX(0); }
+
+        /* Entry cards: rise together */
+        .entry-card {
+            opacity: 0;
+            transform: translateY(44px);
+            transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .entry-card.is-visible { opacity: 1; transform: translateY(0); }
+
+        .tagging-system .tag-item:nth-child(1) { transition-delay: 0ms; }
+        .tagging-system .tag-item:nth-child(2) { transition-delay: 110ms; }
+        .tagging-system .tag-item:nth-child(3) { transition-delay: 220ms; }
+        .tagging-system .tag-item:nth-child(4) { transition-delay: 330ms; }
+
+        .process .process-step:nth-child(1) { transition-delay: 0ms; }
+        .process .process-step:nth-child(2) { transition-delay: 120ms; }
+        .process .process-step:nth-child(3) { transition-delay: 240ms; }
+        .process .process-step:nth-child(4) { transition-delay: 360ms; }
+
+        .pricing-grid .pricing-card:nth-child(1) { transition-delay: 0ms; }
+        .pricing-grid .pricing-card:nth-child(2) { transition-delay: 140ms; }
+        .pricing-grid .pricing-card:nth-child(3) { transition-delay: 280ms; }
+
+        .entry-grid .entry-card:nth-child(1) { transition-delay: 0ms; }
+        .entry-grid .entry-card:nth-child(2) { transition-delay: 160ms; }
+
+        /* FAQ rows: fade + rise in one at a time as you scroll to them */
+        .faq-item {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .faq-item.is-visible { opacity: 1; transform: translateY(0); }
+
+        .faq .faq-item:nth-child(1) { transition-delay: 0ms; }
+        .faq .faq-item:nth-child(2) { transition-delay: 60ms; }
+        .faq .faq-item:nth-child(3) { transition-delay: 120ms; }
+        .faq .faq-item:nth-child(4) { transition-delay: 180ms; }
+        .faq .faq-item:nth-child(5) { transition-delay: 240ms; }
+        .faq .faq-item:nth-child(6) { transition-delay: 300ms; }
+        .faq .faq-item:nth-child(7) { transition-delay: 360ms; }
+
+        /* Hero image: pronounced parallax drift + settle-in scale, driven by Lenis scroll */
+        .hero-image { will-change: transform; }
+        .hero-image img { will-change: transform; }
+
         @media (prefers-reduced-motion: reduce) {
-            .reveal { opacity: 1; transform: none; transition: none; }
+            .reveal,
+            .tag-item,
+            .process-step,
+            .pricing-card,
+            .proof-item,
+            .entry-card,
+            .faq-item {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
         }
 
         /* IMAGE STYLES */
@@ -234,7 +477,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 100px 0 60px;
+            padding: 60px 0 60px;
         }
 
         .hero-inner {
@@ -355,6 +598,47 @@
 
         @media (max-width: 768px) {
             .problem .container { grid-template-columns: 1fr; gap: 40px; }
+        }
+
+        /* FOUNDER */
+        .founder { background: var(--off-white); }
+
+        .founder .container {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 72px;
+            align-items: center;
+        }
+
+        .founder-image {
+            aspect-ratio: 4/5;
+            max-height: 480px;
+        }
+
+        .founder-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+        .founder-text h2 { margin-bottom: 24px; }
+        .founder-text p { margin-bottom: 20px; max-width: 560px; }
+        .founder-text p:last-of-type { margin-bottom: 0; }
+
+        .founder-credentials {
+            list-style: none;
+            margin-top: 32px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 28px;
+        }
+
+        .founder-credentials li {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            letter-spacing: 0.3px;
+            color: var(--gray);
+        }
+
+        @media (max-width: 768px) {
+            .founder .container { grid-template-columns: 1fr; gap: 32px; }
+            .founder-image { max-height: 360px; order: -1; }
         }
 
         /* WHAT I DO */
@@ -758,6 +1042,28 @@
 </head>
 <body>
 
+    <noscript>
+        <style>
+            .reveal, .tag-item, .process-step, .pricing-card, .proof-item, .entry-card, .faq-item {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        </style>
+    </noscript>
+
+    <header class="site-header">
+        <div class="container site-header-inner">
+            <a href="#" class="site-logo">Hardline Editions</a>
+            <nav class="site-nav">
+                <a href="#services">Services</a>
+                <a href="#process">Process</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+            <a href="#diagnostic" class="btn btn-primary">Book a Diagnostic Call</a>
+        </div>
+    </header>
+
     <div class="side-label">Hardline Editions</div>
 
     <!-- HERO -->
@@ -821,15 +1127,38 @@
         <div class="container">
             <div class="problem-left">
                 <div class="rule-dark mb-32"></div>
-                <h2 class="reveal">Most business books fail before Chapter 1.</h2>
+                <h2 class="reveal">There's a place where manuscripts go to die. It's called The Shelf.</h2>
             </div>
             <div class="problem-right">
-                <p>Not because the expertise is bad. Because the book was built like a textbook, not an asset.</p>
-                <p>A book that doesn't generate leads, justify your fees, or open doors to speaking is just paper with your name on it.</p>
-                <p><strong>If you've been rewriting sentences when the real fix is somewhere else in the book, you're not alone.</strong> Most authors assume a book that isn't converting readers into clients needs better writing. Almost every time I open a manuscript, the sentences are fine. The sequence is what's working against the author.</p>
+                <p>Not a bookshelf. A state. The Shelf is the 40,000-word doc with a cursor blinking for three years. The outline that made sense in 2019 and now reads like someone else's fever dream. Almost every author I meet already has one.</p>
+                <p>Traditional publishing and self-publishing sell the same false comfort: write a proposal and wait eighteen months, or upload a template and hope the algorithm notices. Neither gives you the one thing that actually gets a manuscript off The Shelf: structure.</p>
+                <p><strong>The longer it sits there, the easier it is to believe the problem is you.</strong> Not enough discipline, not enough time. It isn't. Most authors assume a book that isn't converting readers into clients needs better writing. Almost every time I open a manuscript, the sentences are fine. The Shelf is what's working against the author, not the prose.</p>
                 <div class="problem-cta">
                     <a href="#entry" class="btn btn-outline">Send me your manuscript</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOUNDER -->
+    <section class="founder" id="founder">
+        <div class="container">
+            <div class="founder-image img-placeholder">
+                <img src="" alt="[FOUNDER PHOTO: headshot of Dror Eyal, founder of Hardline Editions]" style="display:none;">
+                <span>Founder Photo Placeholder</span>
+            </div>
+            <div class="founder-text">
+                <div class="rule-dark mb-32"></div>
+                <h2 class="reveal">Before Hardline Editions, I spent two decades making sure people kept reading.</h2>
+                <p>I started as a technology editor in Cape Town, then spent years across South African newsrooms, including the Mail &amp; Guardian and the Sunday Independent, doing the one job most business books skip: making a reader want to turn the page.</p>
+                <p>Then I spent years self-publishing nonfiction on Amazon, learning the other half of the equation, what actually makes a stranger click buy. Hardline Editions is what happens when both of those skill sets get run through the same manuscript.</p>
+                <p>I don't take on vanity projects. I work with coaches, consultants, and therapists who have real expertise and no platform to prove it, and I build the book that gets them one.</p>
+                <ul class="founder-credentials">
+                    <li>BA (Hons) Journalism, Rhodes University</li>
+                    <li>20+ years newsroom editing</li>
+                    <li>Hands-on Amazon publishing experience</li>
+                    <li>2 client slots per month, by application</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -880,7 +1209,7 @@
                     <h3>We didn't cut your book down. We concentrated it.</h3>
                     <span class="service-tag">The Compression</span>
                 </div>
-                <p>A year of your life went into a manuscript. Before anyone touches it with a red pen, you need to hear that.</p>
+                <p>A year of your life went into a manuscript. Before anyone touches it with a red pen, you need to hear that. If it's been sitting on The Shelf getting heavier instead of shorter, that's not a discipline problem. It's a structure problem.</p>
                 <p>Thirteen chapters went in. Five came out. Not because eight were bad, but because most readers never made it far enough to find out.</p>
 
                 <ul class="checklist">
@@ -902,7 +1231,7 @@
                     <h3>Your podcast isn't the product. It's the ore.</h3>
                     <span class="service-tag">Content-to-Book</span>
                 </div>
-                <p>Ten hours of talking is not a manuscript. It's ten hours of you thinking out loud, saying the same idea four different ways because you didn't know which version would land. All of that is gold. None of it is finished, and none of it is doing the one job that actually matters.</p>
+                <p>Ten hours of talking is not a manuscript. It's ten hours of you thinking out loud, saying the same idea four different ways because you didn't know which version would land. All of that is gold. None of it is finished, and none of it is doing the one job that actually matters. It's a Shelf too, you just don't recognize it as one, because you never sat down to "write" it.</p>
                 <p>Most podcast-to-book services just clean up your transcript. Chapter one is episode one, chapter two is episode two, tidied up, some paragraph breaks added, done. Technically a book. Functionally a very expensive PDF nobody's going to finish.</p>
                 <p><strong>We don't start with your episodes in order.</strong> We start by finding the one idea you keep circling back to across all ten hours, the belief you'd defend even if every guest disagreed with you, and build the book's spine around that first. Because that spine is what eventually gets quoted in an introduction before you walk on stage.</p>
 
@@ -1130,7 +1459,7 @@
 
             <div class="faq-item active">
                 <div class="faq-question">What if the writing was never the problem?<span class="faq-toggle">+</span></div>
-                <div class="faq-answer"><p>Most authors assume a book that isn't converting readers into clients needs better sentences. Almost every time I open a manuscript, the sentences are fine. The sequence is what's working against the author.</p></div>
+                <div class="faq-answer"><p>Most authors assume a book that isn't converting readers into clients needs better sentences. Almost every time I open a manuscript, the sentences are fine. What's actually working against the author is The Shelf, the years a manuscript sits half-finished until the author starts to believe the problem is them instead of the structure.</p></div>
             </div>
 
             <div class="faq-item">
@@ -1210,6 +1539,7 @@
     LinkedIn connections who clicked through but didn't book.
     -->
 
+    <script src="https://unpkg.com/lenis@1.3.25/dist/lenis.min.js"></script>
     <script>
         // FAQ accordion
         document.querySelectorAll('.faq-question').forEach(q => {
@@ -1238,20 +1568,56 @@
             stickyObserver.observe(sentinel);
         }
 
-        // Restrained reveal-on-scroll for section headers
-        const revealEls = document.querySelectorAll('.reveal');
+        // Restrained reveal-on-scroll for headers and grid items (staggered via CSS transition-delay)
+        // Bidirectional: re-hides when you scroll back up past an element, replays when you scroll back down to it.
+        const revealEls = document.querySelectorAll('.reveal, .tag-item, .process-step, .pricing-card, .proof-item, .entry-card, .faq-item');
         if ('IntersectionObserver' in window && revealEls.length) {
             const revealObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('is-visible');
-                        revealObserver.unobserve(entry.target);
+                    } else if (entry.boundingClientRect.top > 0) {
+                        // Element is below the viewport, meaning we scrolled back up past it: reset it.
+                        // (If top is negative, we scrolled past it going down, so leave it revealed.)
+                        entry.target.classList.remove('is-visible');
                     }
                 });
             }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
             revealEls.forEach(el => revealObserver.observe(el));
         } else {
             revealEls.forEach(el => el.classList.add('is-visible'));
+        }
+
+        // Smooth scroll (Lenis) + a restrained hero parallax driven off it.
+        // Skipped entirely under reduced-motion, or if the CDN script didn't load, so nothing depends on it.
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const heroImage = document.querySelector('.hero-image');
+
+        if (!prefersReducedMotion && typeof Lenis !== 'undefined') {
+            const lenis = new Lenis({
+                duration: 1.5,
+                easing: (t) => 1 - Math.pow(1 - t, 3), // ease-out-cubic, no bounce
+                smoothWheel: true,
+            });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+
+            if (heroImage) {
+                const updateParallax = () => {
+                    const rect = heroImage.getBoundingClientRect();
+                    // Progress from 0 (top of viewport) to 1 (scrolled past), clamped
+                    const progress = Math.min(Math.max(1 - rect.top / window.innerHeight, 0), 1);
+                    const shift = progress * 130; // px of drift, now clearly visible
+                    const scale = 1.12 - progress * 0.12; // settles from 1.12 down to 1.0
+                    heroImage.style.transform = `translateY(${shift}px) scale(${scale})`;
+                };
+                lenis.on('scroll', updateParallax);
+                updateParallax();
+            }
         }
     </script>
 
