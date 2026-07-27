@@ -39,7 +39,7 @@
           "name": "What if the writing was never the problem?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most authors assume a book that isn't converting readers into clients needs better sentences. Almost every time I open a manuscript, the sentences are fine. What's actually working against the author is The Shelf, the years a manuscript sits half-finished until the author starts to believe the problem is them instead of the structure."
+            "text": "Most authors assume a book that isn't converting readers into clients needs better sentences. Almost every time I open a manuscript, the sentences are fine. What's actually working against the author is The Drawer, the years a manuscript sits half-finished until the author starts to believe the problem is them instead of the structure."
           }
         },
         {
@@ -47,7 +47,7 @@
           "name": "Do I need a finished manuscript?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. An outline, rough draft, 10 hours of podcast content, or 300 episodes works. We assess what's there and build from it. The diagnostic tells us if you have enough raw material, or if you need to create more before we start."
+            "text": "No. An outline, rough draft, 10 to 15 hours of podcast content, or 300 episodes works. We assess what's there and build from it. The diagnostic tells us if you have enough raw material, or if you need to create more before we start."
           }
         },
         {
@@ -55,7 +55,7 @@
           "name": "Is this ghostwriting?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Ghostwriters charge five figures and spend a year interviewing you to build a book that doesn't exist yet. I work in 10 days to 4 weeks, because the book already exists, it's in your manuscript, your outline, or your back catalog of episodes. My job is finding it and building the structure around it, not inventing it from nothing."
+            "text": "No. Ghostwriters charge five figures and spend a year interviewing you to build a book that doesn't exist yet. I work in 4 to 6 weeks, because the book already exists, it's in your manuscript, your outline, or your back catalog of episodes. My job is finding it and building the structure around it, not inventing it from nothing."
           }
         },
         {
@@ -71,7 +71,7 @@
           "name": "How long does it take?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Diagnostic: 15 minutes. Assessment: 48 hours. The Finish Line: 10 days from kickoff to print-ready files. Authority Engine: 4 weeks including the full platform build. Timelines assume you can turn around feedback within 24 hours."
+            "text": "Diagnostic: 20 minutes. The Finish Line: 4 weeks. The Authority Engine: 4 to 6 weeks. The Podcast-to-Book: 4 weeks. The Full Build: scoped per project. Timelines assume you can turn around feedback within 24 hours."
           }
         },
         {
@@ -84,10 +84,10 @@
         },
         {
           "@type": "Question",
-          "name": "What's the difference between The Finish Line and Authority Engine?",
+          "name": "What's the difference between The Finish Line and The Authority Engine?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The Finish Line gets you a professional book. Authority Engine turns that book into a client acquisition system. If you already have a funnel and just need the asset, The Finish Line is enough. If you need the book to actually generate leads and appointments, you need the Engine."
+            "text": "The Finish Line is for a manuscript that's already finished: light editing, production, and a deadline that overrides the urge to keep revising. It doesn't restructure anything. The Authority Engine is structural surgery, for a manuscript with real architectural problems: we run the full diagnostic, cut it down to its real core, and rebuild it as a five-chapter book. If your manuscript just needs to stop being revised, you need The Finish Line. If it needs to be taken apart and rebuilt, you need The Engine."
           }
         },
         {
@@ -403,6 +403,7 @@
         .process .process-step:nth-child(2) { transition-delay: 120ms; }
         .process .process-step:nth-child(3) { transition-delay: 240ms; }
         .process .process-step:nth-child(4) { transition-delay: 360ms; }
+        .process .process-step:nth-child(5) { transition-delay: 480ms; }
 
         .entry-grid .entry-card:nth-child(1) { transition-delay: 0ms; }
         .entry-grid .entry-card:nth-child(2) { transition-delay: 160ms; }
@@ -426,7 +427,7 @@
 
         /* Hero image: pronounced parallax drift + settle-in scale, driven by Lenis scroll */
         .hero-image { will-change: transform; }
-        .hero-image img { will-change: transform; }
+        .hero-image img, .hero-image video { will-change: transform; }
 
         @media (prefers-reduced-motion: reduce) {
             .reveal,
@@ -494,8 +495,8 @@
             color: var(--gray);
         }
 
-        .hero-image { aspect-ratio: 3/4; max-height: 520px; }
-        .hero-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .hero-image { aspect-ratio: 3/4; max-height: 520px; overflow: hidden; background: var(--light-gray); }
+        .hero-image img, .hero-image video { width: 100%; height: 100%; object-fit: cover; display: block; }
 
         .hero-cta { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
 
@@ -755,19 +756,6 @@
             .step-meta { text-align: left; display: flex; gap: 16px; }
         }
 
-        /* PROCESS IMAGE BAND */
-        .process-image-band {
-            margin-top: 72px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1px;
-            background: var(--light-gray);
-        }
-
-        .process-image-band .img-placeholder { aspect-ratio: 16/9; background: var(--white); }
-
-        @media (max-width: 768px) { .process-image-band { grid-template-columns: 1fr; } }
-
         /* DIAGNOSTIC PREP */
         .diagnostic-prep { background: var(--black); color: var(--white); }
         .diagnostic-prep h2 { color: var(--white); margin-bottom: 48px; max-width: 640px; }
@@ -840,7 +828,7 @@
             background: var(--accent);
         }
 
-        .proof-visual { aspect-ratio: 4/3; }
+        .proof-visual { aspect-ratio: 3/4; max-height: 560px; }
         .proof-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
         @media (max-width: 768px) {
@@ -1037,9 +1025,10 @@
                         <div class="hero-meta-item">Next opening<strong>August 2026</strong></div>
                     </div>
                 </div>
-                <div class="hero-image img-placeholder">
-                    <img src="" alt="[HERO IMAGE: Close-up of an open manuscript with red editorial marks and handwritten notes in the margins. Warm desk lighting. Shows the craft of editing.]" style="display:none;">
-                    <span>Hero Image Placeholder</span>
+                <div class="hero-image">
+                    <video autoplay muted loop playsinline preload="auto">
+                        <source src="one.webm" type="video/webm">
+                    </video>
                 </div>
             </div>
         </div>
@@ -1084,12 +1073,12 @@
         <div class="container">
             <div class="problem-left">
                 <div class="rule-dark mb-32"></div>
-                <h2 class="reveal">There's a place where manuscripts go to die. It's called The Shelf.</h2>
+                <h2 class="reveal">There's a place where manuscripts go to die. It's called The Drawer.</h2>
             </div>
             <div class="problem-right">
-                <p>Not a bookshelf. A state. The Shelf is the 40,000-word doc with a cursor blinking for three years. The outline that made sense in 2019 and now reads like someone else's fever dream. Almost every author I meet already has one.</p>
-                <p>Traditional publishing and self-publishing sell the same false comfort: write a proposal and wait eighteen months, or upload a template and hope the algorithm notices. Neither gives you the one thing that actually gets a manuscript off The Shelf: structure.</p>
-                <p><strong>The longer it sits there, the easier it is to believe the problem is you.</strong> Not enough discipline, not enough time. It isn't. Most authors assume a book that isn't converting readers into clients needs better writing. Almost every time I open a manuscript, the sentences are fine. The Shelf is what's working against the author, not the prose.</p>
+                <p>Not a filing cabinet. A state. The Drawer is the 40,000-word file with a cursor blinking for three years. The outline that made sense in 2019 and now reads like someone else's fever dream. In my practice, roughly seven in ten started manuscripts end up here.</p>
+                <p>Traditional publishing and self-publishing sell the same false comfort: write a proposal and wait eighteen months, or upload a template and hope the algorithm notices. Neither one diagnoses what's actually wrong with the manuscript. They just wait it out.</p>
+                <p><strong>The longer it sits there, the easier it is to believe the problem is you.</strong> Not enough discipline, not enough time. It isn't. Every manuscript in The Drawer died of something specific, and in twenty minutes on a call, I can usually tell you what.</p>
                 <div class="problem-cta">
                     <a href="https://calendly.com/hardlineeditions/diagnostic" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Send me your manuscript</a>
                 </div>
@@ -1100,20 +1089,19 @@
     <!-- FOUNDER -->
     <section class="founder" id="founder">
         <div class="container">
-            <div class="founder-image img-placeholder">
-                <img src="" alt="[FOUNDER PHOTO: headshot of Dror Eyal, founder of Hardline Editions]" style="display:none;">
-                <span>Founder Photo Placeholder</span>
+            <div class="founder-image">
+                <img src="founder.jpg" alt="Dror Eyal, founder of Hardline Editions.">
             </div>
             <div class="founder-text">
                 <div class="rule-dark mb-32"></div>
-                <h2 class="reveal">Before Hardline Editions, I spent two decades making sure people kept reading.</h2>
+                <h2 class="reveal">Before Hardline Editions, I spent two decades learning what keeps a stranger reading, then fifteen years learning why they stop.</h2>
                 <p>I started as a technology editor in Cape Town, then spent years across South African newsrooms, including the Mail &amp; Guardian and the Sunday Independent, doing the one job most business books skip: making a reader want to turn the page.</p>
-                <p>Then I spent years self-publishing nonfiction on Amazon, learning the other half of the equation, what actually makes a stranger click buy. Hardline Editions is what happens when both of those skill sets get run through the same manuscript.</p>
-                <p>I don't take on vanity projects. I work with coaches, consultants, and therapists who have real expertise and no platform to prove it, and I build the book that gets them one.</p>
+                <p>In 2005 I published a manifesto that briefly became the most downloaded thing on its platform. It taught me the lesson this business is built on: an idea with no structure behind it goes nowhere, no matter how many people read it. The years after, I spent self-publishing nonfiction on Amazon, learning the other half of the equation, what actually makes a stranger click buy.</p>
+                <p>For the last fifteen years I've been performing autopsies on other people's manuscripts. My own is still in a drawer, which is either a confession or a credential, depending on the day. I don't take on vanity projects. I work with coaches, consultants, and therapists who have real expertise and a wounded manuscript, and I tell them exactly which wound it has, and whether it can be saved.</p>
                 <ul class="founder-credentials">
                     <li>BA (Hons) Journalism, Rhodes University</li>
                     <li>20+ years newsroom editing</li>
-                    <li>Hands-on Amazon publishing experience</li>
+                    <li>15+ years diagnosing manuscripts</li>
                     <li>2 client slots per month, by application</li>
                 </ul>
             </div>
@@ -1164,9 +1152,9 @@
             <div class="service-block">
                 <div class="service-header">
                     <h3>We didn't cut your book down. We concentrated it.</h3>
-                    <span class="service-tag">The Compression</span>
+                    <span class="service-tag">The Authority Engine</span>
                 </div>
-                <p>A year of your life went into a manuscript. Before anyone touches it with a red pen, you need to hear that. If it's been sitting on The Shelf getting heavier instead of shorter, that's not a discipline problem. It's a structure problem.</p>
+                <p>A year of your life went into a manuscript. Before anyone touches it with a red pen, you need to hear that. If it's been sitting in The Drawer getting heavier instead of shorter, that's not a discipline problem. It's a structure problem.</p>
                 <p>Thirteen chapters went in. Five came out. Not because eight were bad, but because most readers never made it far enough to find out.</p>
 
                 <ul class="checklist">
@@ -1182,15 +1170,15 @@
                 </div>
             </div>
 
-            <!-- Service 2: Content-to-Book -->
+            <!-- Service 2: Podcast-to-Book -->
             <div class="service-block">
                 <div class="service-header">
                     <h3>Your podcast isn't the product. It's the ore.</h3>
-                    <span class="service-tag">Content-to-Book</span>
+                    <span class="service-tag">The Podcast-to-Book</span>
                 </div>
-                <p>Ten hours of talking is not a manuscript. It's ten hours of you thinking out loud, saying the same idea four different ways because you didn't know which version would land. All of that is gold. None of it is finished, and none of it is doing the one job that actually matters. It's a Shelf too, you just don't recognize it as one, because you never sat down to "write" it.</p>
+                <p>Ten to fifteen hours of talking is not a manuscript. It's hours of you thinking out loud, saying the same idea four different ways because you didn't know which version would land. All of that is gold. None of it is finished, and none of it is doing the one job that actually matters. It's a Drawer too, you just don't recognize it as one, because you never sat down to "write" it.</p>
                 <p>Most podcast-to-book services just clean up your transcript. Chapter one is episode one, chapter two is episode two, tidied up, some paragraph breaks added, done. Technically a book. Functionally a very expensive PDF nobody's going to finish.</p>
-                <p><strong>We don't start with your episodes in order.</strong> We start by finding the one idea you keep circling back to across all ten hours, the belief you'd defend even if every guest disagreed with you, and build the book's spine around that first. Because that spine is what eventually gets quoted in an introduction before you walk on stage.</p>
+                <p><strong>We don't start with your episodes in order.</strong> We start by finding the one idea you keep circling back to across all those hours, the belief you'd defend even if every guest disagreed with you, and build the book's spine around that first. Because that spine is what eventually gets quoted in an introduction before you walk on stage.</p>
 
                 <div class="service-cta">
                     <a href="https://calendly.com/hardlineeditions/diagnostic" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Find the spine in your episodes</a>
@@ -1204,65 +1192,66 @@
         <div class="container">
             <div class="process-header">
                 <div class="text-label mb-24 reveal">The Process</div>
-                <h2 class="reveal">Four stages. One outcome.</h2>
+                <h2 class="reveal">One diagnostic. Four ways to finish.</h2>
             </div>
 
             <div class="process-step">
                 <div class="step-number">01</div>
                 <div class="step-content">
                     <h3>Diagnostic</h3>
-                    <p>Is a book the right move? What's missing? What's the fastest path from where you are to a book that works? If it's not the right time, I'll tell you.</p>
+                    <p>Which wound does your manuscript actually have, and is it worth saving? If it's not the right time, I'll tell you.</p>
                 </div>
                 <div class="step-meta">
                     <div class="step-price">Free</div>
-                    <div class="step-time">15 minutes</div>
+                    <div class="step-time">20 minutes</div>
                 </div>
             </div>
 
             <div class="process-step">
                 <div class="step-number">02</div>
                 <div class="step-content">
-                    <h3>Assessment</h3>
-                    <p>5-page strategic review of your material: manuscript, transcripts, outline, whatever you have. What works, what doesn't, what comes next.</p>
+                    <h3>The Finish Line</h3>
+                    <p>For a manuscript that's already finished and just needs someone else to be the reason the revisions stop. Two rounds of light editing, cover, formatting, ISBN, print-on-demand setup. No restructuring, no new chapters, no rewrite.</p>
                 </div>
                 <div class="step-meta">
-                    <div class="step-price">$200</div>
-                    <div class="step-time">48 hours</div>
+                    <div class="step-price">$1,500</div>
+                    <div class="step-time">4 weeks</div>
                 </div>
             </div>
 
             <div class="process-step">
                 <div class="step-number">03</div>
                 <div class="step-content">
-                    <h3>The Finish Line</h3>
-                    <p>Manuscript to professional product. Print-ready, credible, yours. Published under Hardline Editions. You keep all rights and revenue. No royalties, no strings.</p>
+                    <h3>The Authority Engine</h3>
+                    <p>Structural surgery for a manuscript with a pulse but broken architecture. Full diagnostic, the Cut Protocol, a five-chapter rebuild around your real through-line, voice calibration, full production.</p>
                 </div>
                 <div class="step-meta">
-                    <div class="step-price">From $900</div>
-                    <div class="step-time">10 days</div>
+                    <div class="step-price">$3,500&ndash;$5,000</div>
+                    <div class="step-time">4&ndash;6 weeks</div>
                 </div>
             </div>
 
             <div class="process-step">
                 <div class="step-number">04</div>
                 <div class="step-content">
-                    <h3>Authority Engine</h3>
-                    <p>The book plus the full platform: funnel, landing page, email sequence, launch strategy. The book becomes your business engine, built to convert readers into clients, not fans.</p>
+                    <h3>The Podcast-to-Book</h3>
+                    <p>For 10 to 15 hours of recorded audio and no manuscript at all. We extract the through-line already hiding in how you talk, build a five-chapter manuscript around it, and produce the finished book.</p>
                 </div>
                 <div class="step-meta">
-                    <div class="step-price">From $2,200</div>
+                    <div class="step-price">$2,200</div>
                     <div class="step-time">4 weeks</div>
                 </div>
             </div>
 
-            <div class="process-image-band">
-                <div class="img-placeholder">
-                    <img src="" alt="[PROCESS IMAGE 1: Overhead shot of a messy desk with scattered manuscript pages, a red pen, a coffee cup, and a laptop showing a document. Warm natural light. Shows the work in progress.]" style="display:none;">
-                    <span>Process Image 1</span>
+            <div class="process-step">
+                <div class="step-number">05</div>
+                <div class="step-content">
+                    <h3>The Full Build</h3>
+                    <p>The book plus the full platform: speaking deck, consulting offer architecture, website and landing page copy, launch strategy, and six months of advisory after that. For the thought leader who sees the book as the first move, not the whole game.</p>
                 </div>
-                <div class="img-placeholder">
-                    <img src="" alt="[PROCESS IMAGE 2: Detail macro shot of printed text with red editorial marks, strikethroughs, arrows, margin notes. Sharp focus on the ink. Shows the precision of the editing craft.]" style="display:none;">
-                    <span>Process Image 2</span>
+                <div class="step-meta">
+                    <div class="step-price">Custom</div>
+                    <div class="step-time">Scoped per project</div>
                 </div>
             </div>
         </div>
@@ -1295,11 +1284,10 @@
                 <div class="proof-text">
                     <blockquote>"He's facing a teenager holding two knives, choosing to stay instead of run. For eleven chapters that moment was sitting halfway through a chapter on emotions, treated like a footnote instead of the strongest proof in the book."</blockquote>
                     <blockquote>"We moved it. Same words, same sentence, just repositioned to open the section on stress and the body. Nothing about the story changed. Only where a reader meets it did."</blockquote>
-                    <cite>Manuscript compression, 13 chapters to 5 sections</cite>
+                    <cite>The Authority Engine, 13 chapters to 5</cite>
                 </div>
-                <div class="proof-visual img-placeholder">
-                    <img src="" alt="[PROOF IMAGE 1: A before-and-after spread showing manuscript pages, the left page with a paragraph circled in the middle, the right page with that same paragraph moved to the top of a new section. Red editorial marks visible. Shows the repositioning work.]" style="display:none;">
-                    <span>Proof Image 1</span>
+                <div class="proof-visual">
+                    <img src="two.jpg" alt="Printed manuscript page marked up with pink, green, and yellow highlighter and handwritten annotations in the margin.">
                 </div>
             </div>
 
@@ -1308,22 +1296,20 @@
                     <blockquote>"The best chapter in a client's book was one sentence, buried about forty minutes into episode sixty. He'd completely forgotten he ever said it."</blockquote>
                     <blockquote>"He's twenty minutes into that episode, mid-thought, heading somewhere else, and he says the actual thesis of his whole philosophy without meaning to. Then keeps talking. Moves past it like it was nothing."</blockquote>
                     <blockquote>"Once it's on page one instead of buried in episode sixty, it's the line that gets forwarded, quoted in an intro, and eventually turns into the invitation that pays."</blockquote>
-                    <cite>Content-to-book, 300+ podcast episodes to 1 manuscript</cite>
+                    <cite>The Podcast-to-Book, 300+ podcast episodes to 1 manuscript</cite>
                 </div>
-                <div class="proof-visual img-placeholder">
-                    <img src="" alt="[PROOF IMAGE 2: A podcast waveform visualization next to a clean manuscript page. The waveform has a small section highlighted, and an arrow points to the top of the manuscript page. Shows the extraction from audio to text.]" style="display:none;">
-                    <span>Proof Image 2</span>
+                <div class="proof-visual">
+                    <img src="three.jpg" alt="Printed manuscript page with underlined passages and margin notes, photographed on a desk.">
                 </div>
             </div>
 
             <div class="proof-item">
                 <div class="proof-text">
-                    <blockquote>"I had 12 hours of content and no idea how to turn it into something that felt like a real book. In 10 days, I had a manuscript I was proud to put my name on."</blockquote>
+                    <blockquote>"I had 12 hours of content and no idea how to turn it into something that felt like a real book. In 4 weeks, I had a manuscript I was proud to put my name on."</blockquote>
                     <cite>Client Name, Position/Company</cite>
                 </div>
-                <div class="proof-visual img-placeholder">
-                    <img src="" alt="[PROOF IMAGE 3: A professional book cover mockup standing upright on a shelf or desk, spine visible with Hardline Editions at the bottom. Clean, editorial design. Warm side lighting. Shows the finished product.]" style="display:none;">
-                    <span>Book Cover Placeholder</span>
+                <div class="proof-visual">
+                    <img src="book.png" alt="A hand holding the printed paperback of Back in the Driver's Seat by Rohan Parrant, cover design with bold red and black type and a steering wheel icon.">
                 </div>
             </div>
         </div>
@@ -1362,17 +1348,17 @@
 
             <div class="faq-item active">
                 <div class="faq-question">What if the writing was never the problem?<span class="faq-toggle">+</span></div>
-                <div class="faq-answer"><p>Most authors assume a book that isn't converting readers into clients needs better sentences. Almost every time I open a manuscript, the sentences are fine. What's actually working against the author is The Shelf, the years a manuscript sits half-finished until the author starts to believe the problem is them instead of the structure.</p></div>
+                <div class="faq-answer"><p>Most authors assume a book that isn't converting readers into clients needs better sentences. Almost every time I open a manuscript, the sentences are fine. What's actually working against the author is The Drawer, the years a manuscript sits half-finished until the author starts to believe the problem is them instead of the structure.</p></div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-question">Do I need a finished manuscript?<span class="faq-toggle">+</span></div>
-                <div class="faq-answer"><p>No. An outline, rough draft, 10 hours of podcast content, or 300 episodes works. We assess what's there and build from it. The diagnostic tells us if you have enough raw material, or if you need to create more before we start.</p></div>
+                <div class="faq-answer"><p>No. An outline, rough draft, 10 to 15 hours of podcast content, or 300 episodes works. We assess what's there and build from it. The diagnostic tells us if you have enough raw material, or if you need to create more before we start.</p></div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-question">Is this ghostwriting?<span class="faq-toggle">+</span></div>
-                <div class="faq-answer"><p>No. Ghostwriters charge five figures and spend a year interviewing you to build a book that doesn't exist yet. I work in 10 days to 4 weeks, because the book already exists, it's in your manuscript, your outline, or your back catalog of episodes. My job is finding it and building the structure around it, not inventing it from nothing.</p></div>
+                <div class="faq-answer"><p>No. Ghostwriters charge five figures and spend a year interviewing you to build a book that doesn't exist yet. I work in 4 to 6 weeks, because the book already exists, it's in your manuscript, your outline, or your back catalog of episodes. My job is finding it and building the structure around it, not inventing it from nothing.</p></div>
             </div>
 
             <div class="faq-item">
@@ -1382,7 +1368,7 @@
 
             <div class="faq-item">
                 <div class="faq-question">How long does it take?<span class="faq-toggle">+</span></div>
-                <div class="faq-answer"><p>Diagnostic: 15 minutes. Assessment: 48 hours. The Finish Line: 10 days from kickoff to print-ready files. Authority Engine: 4 weeks including the full platform build. Timelines assume you can turn around feedback within 24 hours.</p></div>
+                <div class="faq-answer"><p>Diagnostic: 20 minutes. The Finish Line: 4 weeks. The Authority Engine: 4 to 6 weeks. The Podcast-to-Book: 4 weeks. The Full Build: scoped per project. Timelines assume you can turn around feedback within 24 hours.</p></div>
             </div>
 
             <div class="faq-item">
@@ -1391,8 +1377,8 @@
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">What's the difference between The Finish Line and Authority Engine?<span class="faq-toggle">+</span></div>
-                <div class="faq-answer"><p>The Finish Line gets you a professional book. Authority Engine turns that book into a client acquisition system. If you already have a funnel and just need the asset, The Finish Line is enough. If you need the book to actually generate leads and appointments, you need the Engine.</p></div>
+                <div class="faq-question">What's the difference between The Finish Line and The Authority Engine?<span class="faq-toggle">+</span></div>
+                <div class="faq-answer"><p>The Finish Line is for a manuscript that's already finished: light editing, production, and a deadline that overrides the urge to keep revising. It doesn't restructure anything. The Authority Engine is structural surgery, for a manuscript with real architectural problems: we run the full diagnostic, cut it down to its real core, and rebuild it as a five-chapter book. If your manuscript just needs to stop being revised, you need The Finish Line. If it needs to be taken apart and rebuilt, you need The Engine.</p></div>
             </div>
 
             <div class="faq-item">
@@ -1404,13 +1390,12 @@
 
     <!-- CTA -->
     <section class="cta-section" id="diagnostic">
-        <div class="cta-image-wrap img-placeholder">
-            <img src="" alt="[CTA IMAGE: Wide shot of a speaking stage from the audience perspective, a single spotlight, empty podium, darkened room. Or alternatively: a clean desk from above with a closed book, a pen, and a cup of coffee. Warm, inviting, human. Sets the mood for taking action.]" style="display:none;">
-            <span>CTA Background Image</span>
+        <div class="cta-image-wrap">
+            <img src="background.png" alt="Empty theater stage seen from the audience, a single spotlight on a wooden podium with a microphone, rows of dark seats in the foreground.">
             <div class="cta-overlay">
                 <div>
                     <h2>Book your free diagnostic.</h2>
-                    <p>15 minutes. Honest assessment. If a book isn't your next move, I'll tell you, and point you toward what is.</p>
+                    <p>20 minutes. Honest assessment. If a book isn't your next move, I'll tell you, and point you toward what is.</p>
                     <a href="https://calendly.com/hardlineeditions/diagnostic" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Book a Diagnostic Call</a>
                 </div>
             </div>
